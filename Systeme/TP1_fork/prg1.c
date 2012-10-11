@@ -47,6 +47,7 @@ main(int argc,char* argv[],char* arge[])
 	        printf("valeur de fork = %d \n",pid);
 	        printf("je suis le processus pere %d de pere %d\n",getpid(),getppid());
 	        printf("fin du processus pere\n");
+		// ou WAIT(NULL) a la place de waitpid (attend que tout les fils se termine)
 	        exit(0);
  	}    
    }
