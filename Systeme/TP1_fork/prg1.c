@@ -20,7 +20,8 @@ main(int argc,char* argv[],char* arge[])
   {
   pid_t pid;
   const int nbarg = 1;
-  int temps_s;
+  int temps_s, statut
+;
   
   temps_s = (argc-1 == 1) ? atoi(argv[1]) : 0;
       
@@ -35,12 +36,20 @@ main(int argc,char* argv[],char* arge[])
         exit(0);                           /* idem */
      default:
                           /* on est dans le processus pere */
+
         if (temps_s>0) sleep(temps_s);
-        printf("valeur de fork = %d \n",pid);
-        printf("je suis le processus pere %d de pere %d\n",getpid(),getppid());
-        printf("fin du processus pere\n");
-        exit(0);
-     }
-  }
+    if (waitpid(pid, &statut, 0) == -1)
+	{
+		printf("On attends \n");
+	}
+	else 
+	{ 
+	        printf("valeur de fork = %d \n",pid);
+	        printf("je suis le processus pere %d de pere %d\n",getpid(),getppid());
+	        printf("fin du processus pere\n");
+	        exit(0);
+ 	}    
+   }
+}
    
         
