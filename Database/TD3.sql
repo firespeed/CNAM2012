@@ -17,8 +17,8 @@ CREATE TABLE ACCA(
 	accaCode number not null,
 	accaCommune varchar(50),
 	accaMontant varchar(50),
-	accaCP number(5) constraint unik_CP UNIQUE,
-	accaVille varchar(20) constraint unik_VILLE UNIQUE,
+	accaCP number(5),
+	accaVille varchar(20),
 	fk_fcdDept number not null,
 	primary key (accaCode), 
 	constraint fk_FDC foreign key  (fk_fcdDept) references FDC(fdcDept) ON DELETE SET NULL,
@@ -28,3 +28,6 @@ CREATE TABLE ACCA(
 INSERT INTO FDC(fdcDept) VALUES (98);
 INSERT INTO FDC(fdcDept) VALUES (91);
 INSERT INTO ACCA(accaCode,fk_fcdDept) VALUES (seqACCA.NEXTVAL,91);
+
+ALTER TABLE ACCA 
+ADD CONSTRAINT uqacca UNIQUE (accaVille, accaCp);
