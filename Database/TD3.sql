@@ -1,6 +1,8 @@
 DROP TABLE ACCA;
 DROP TABLE FDC ;
 
+CREATE SEQUENCE seqACCA;
+
 CREATE TABLE FDC(
 	fdcDept number not null,
 	fdcNumRue varchar(50),
@@ -8,7 +10,7 @@ CREATE TABLE FDC(
 	fdcCP number(5),
 	fdcVille varchar(20),
 	primary key (fdcDept) ,
-	check (fdcDept<93)
+	check (fdcDept BETWEEN 1 AND 92)
 );
 
 CREATE TABLE ACCA(
@@ -22,3 +24,7 @@ CREATE TABLE ACCA(
 	constraint fk_FDC foreign key  (fk_fcdDept) references FDC(fdcDept) ON DELETE SET NULL,
 	CHECK (substr(accaCP,1,2)= fk_fcdDept)
 );
+-- test constraint check FDC 
+INSERT INTO FDC(fdcDept) VALUES (98);
+INSERT INTO FDC(fdcDept) VALUES (91);
+INSERT INTO ACCA(accaCode,fk_fcdDept) VALUES (seqACCA.NEXTVAL,91);
