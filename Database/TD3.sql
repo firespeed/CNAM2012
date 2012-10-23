@@ -25,7 +25,7 @@ CREATE TABLE ACCA(
 	CHECK (substr(accaCP,1,2)= fk_fcdDept)
 );
 -- test constraint check FDC 
-INSERT INTO FDC(fdcDept) VALUES (98);
+--INSERT INTO FDC(fdcDept) VALUES (98);
 INSERT INTO FDC(fdcDept) VALUES (91);
 INSERT INTO ACCA(accaCode,fk_fcdDept) VALUES (seqACCA.NEXTVAL,91);
 
