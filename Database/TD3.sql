@@ -15,9 +15,10 @@ CREATE TABLE ACCA(
 	accaCode number not null,
 	accaCommune varchar(50),
 	accaMontant varchar(50),
-	accaCP number(5),
-	accaVille varchar(20),
+	accaCP number(5) constraint unik_CP UNIQUE,
+	accaVille varchar(20) constraint unik_VILLE UNIQUE,
 	fk_fcdDept number not null,
 	primary key (accaCode), 
-	constraint fk_FDC foreign key  (fk_fcdDept) references FDC(fdcDept) 
+	constraint fk_FDC foreign key  (fk_fcdDept) references FDC(fdcDept) ON DELETE SET NULL,
+	CHECK (substr(accaCP,1,2)= fk_fcdDept)
 );
