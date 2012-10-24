@@ -1,0 +1,23 @@
+ mettre un . pour appeler les methodes sauf quand c'est un pointeur sur un objet
+
+adresse de la variable 
+	&a
+
+pointeur = variable qui contient l'adresse dune case mémoire
+	double *pointeurA(0); //Un pointeur qui peut contenir
+			    l'adresse d'un nombre a virgule initialiser a 0
+
+pointeurA=&a; // stock l'addresse
+
+En utilisant l'étoile, on accède à la valeur de la variable pointée. C'est ce qui s'appelle déréférencer un pointeur.
+
+
+
+
+Pour une variable int nombre :
+nombre permet d'accéder à la valeur  de la variable.
+&nombre permet d'accéder à l' adresse de la variable.
+
+ Sur un pointeur int *pointeur :
+pointeur permet d'accéder à la valeur du pointeur, c'est-à-dire à l'adresse de la variable pointée.
+*pointeur permet d'accéder à la valeur de la variable pointée.
