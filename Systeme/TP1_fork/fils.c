@@ -4,10 +4,10 @@
 
 #include <stdio.h>
 
-main(int argc,char* argv[],char* arge[])
+int main(int argc,char* argv[],char* arge[])
   {
   printf("je suis le fils \n");
-  sleep(3);
+  sleep(2);
   }
    
         

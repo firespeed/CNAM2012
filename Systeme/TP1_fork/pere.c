@@ -13,10 +13,12 @@ main(int argc,char* argv[],char* arge[])
      case (pid_t)  0 :   
                             /* on est dans le processus fils */
         execl("./fils","fils",NULL);
+	printf("je rentre pas dedans");// ne l'écrit puisque l'execl lance un processus externe 
+	//au programme il fera donc un exit a la fin de l'execution du programme fils
 	exit(1);
      default:
                             /* on est dans le processus pere */
-        wait(NULL);
+        wait(NULL); // le pere attend que les processus fils soit terminer 
         printf("je suis le pere \n");
      }
   }
