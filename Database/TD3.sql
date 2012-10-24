@@ -22,7 +22,7 @@ CREATE TABLE ACCA(
 	fk_fcdDept number not null,
 	primary key (accaCode), 
 	constraint fk_FDC foreign key  (fk_fcdDept) references FDC(fdcDept) ON DELETE SET NULL,
-	CHECK (substr(accaCP,1,2)= fk_fcdDept)
+	CHECK (substr(accaCP,1,2)= fk_fcdDept) -- check
 );
 -- test constraint check FDC 
 --INSERT INTO FDC(fdcDept) VALUES (98);
