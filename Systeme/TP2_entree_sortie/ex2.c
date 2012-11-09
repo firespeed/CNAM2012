@@ -12,7 +12,7 @@ main()
    int f1, f2;
    char buf1[100], buf2[100];
    
-   f1 = open("./bonjour", O_RDONLY);
+   f1 = open("./example", O_RDONLY);
    f2 = dup(f1);
    
    printf("position initiale du pointeur de lecture n1 : %d\n", lseek(f1,0,1));
