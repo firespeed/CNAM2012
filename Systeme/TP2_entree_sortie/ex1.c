@@ -13,16 +13,16 @@ main()
    int f1, f2;
    char buffer[100];
    
-   f1 = open("./bonjour", O_RDONLY);
-   f2 = open("./bonjour", O_RDONLY);
+   f1 = open("./example", O_RDONLY);
+   //f2 = open("./example", O_RDONLY);
    
    printf("position initiale du pointeur de lecture n1 : %d\n", lseek(f1,0,1));
-   printf("position initiale du pointeur de lecture n2 : %d\n", lseek(f2,0,1));
+   //printf("position initiale du pointeur de lecture n2 : %d\n", lseek(f2,0,1));
    
    read(f1, buffer, 40);
    
    printf("position nouvelle du pointeur de lecture n1 : %d\n", lseek(f1,0,1));
-   printf("position nouvelle du pointeur de lecture n2 : %d\n", lseek(f2,0,1));
+   //printf("position nouvelle du pointeur de lecture n2 : %d\n", lseek(f2,0,1));
 }
 
 /* exécution :
