@@ -66,8 +66,18 @@ void create_process(char* nom_process,int nb_process){
 void create_map(){
 // matrice distance et temps 
 
+	int nbPoints = 5:
 
-
+	// Tableau : premier point ; deuxième point ; distance et temps
+	int tableau [nbPoints][nbPoints][2];
+	
+	// Initialisation origine = destination
+	for(int i = 0; i < nbPoints; i++)
+	{
+		tableau[i][i][0] = 0; // Distance
+		tableau[i][i][0] = 1; // temps
+		printf("Origine: %d , Destination: %d , distance en m: %d , temps en min: %d", i, i, tableau[i][i][0],tableau[i][i][1]);
+	}
 
 }
 
