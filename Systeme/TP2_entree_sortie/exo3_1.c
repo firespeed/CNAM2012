@@ -11,25 +11,36 @@
 
 main(int argc, char *argv[])
 {
-   int f1, f2;
-   int nbLu;
-   char buffer[512];
-   
+		
+
    if (argc != 3) {
     	write(2, "erreur parametre\n",18);
 	exit(1);
    }
-   if ((f1 = open(argv[1], 0)) == -1) {
-   	write(2, "ouverture fichier source impossible\n",36);
-	exit(2);
-   }
-   if ((f2 = creat(argv[2], 0666)) == -1) {
-   	write(2, "création fichier destination impossible\n",41);
-	exit(3);
-   }
    
-   while ((nbLu = read(f1, buffer, 512)) > 0)
-   	write(f2, buffer, nbLu);
+	FILE * File_first, *File_second;
+	  char ch;
+	  char buffer[500] ;
+	  File_first=fopen (argv[1],"r");
+	  File_second=fopen (argv[2],"wb");
+	  if (File_first==NULL) perror ("Error opening file");
+	  else
+	  {
+		ch = getc( File_first );
+		while( ch != EOF ) {
+		  printf( "%c", ch );
+		  fwrite (buffer , 1 , sizeof(buffer) , File_second );
+ 
+		  // changement de caractere
+		  ch = getc( input );
+		}
+		fclose (File_first);
+		fclose (File_second);
+
+
+	  }
+
+   
 	
    exit(0);
 }
