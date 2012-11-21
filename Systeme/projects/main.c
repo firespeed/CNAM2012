@@ -7,11 +7,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-
+double frand_a_b(double a, double b);
+void create_map();
 void create_process(char* nom_process,int nb_process);
 
 int main(int argc,char* argv[],char* arge[]){
-	  
+  //génération map
+  create_map();
 	  
   switch (fork()) {
      case (pid_t) -1 :  perror(""),exit(1);// break inutile
@@ -66,18 +68,39 @@ void create_process(char* nom_process,int nb_process){
 void create_map(){
 // matrice distance et temps 
 
-	int nbPoints = 5:
-
+	int nbPoints = 5;
+	int dis=0;
 	// Tableau : premier point ; deuxième point ; distance et temps
 	int tableau [nbPoints][nbPoints][2];
 	
 	// Initialisation origine = destination
-	for(int i = 0; i < nbPoints; i++)
+	int i,y;
+	for( i = 0; i < nbPoints; i++)
 	{
-		tableau[i][i][0] = 0; // Distance
-		tableau[i][i][0] = 1; // temps
-		printf("Origine: %d , Destination: %d , distance en m: %d , temps en min: %d", i, i, tableau[i][i][0],tableau[i][i][1]);
+		for(y=0; y < nbPoints;y++){
+			
+			if(i!=y)
+				dis = frand_a_b(1,20);
+			else 
+				dis=0;
+			tableau[i][y][0] = dis; // Distance
+			tableau[y][i][0] = dis; // Distance
+			tableau[i][y][1] = (dis/2); // temps
+			tableau[y][i][1] = (dis/2); // temps
+		}
+	}
+	// affichage map une fois création
+	for( i = 0; i < nbPoints; i++)
+	{
+		for(y=0; y < nbPoints;y++){
+		
+			printf("Origine: %d , Destination: %d , distance en m: %d , temps en min: %d \n", i, y, tableau[i][y][0],tableau[i][y][1]);
+		}
 	}
 
+}
+
+double frand_a_b(double a, double b){
+    return ( rand()/(double)RAND_MAX ) * (b-a) + a;
 }
 
