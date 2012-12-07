@@ -1,0 +1,47 @@
+Collisions : <span id="info">0</span>
+<div id="jeu">
+<img id="fond1" class="fond" src="../assets/images/fond.png">
+<img id="fond2" class="fond" src="../assets/images/fond.png">
+<img id="yellow_card" src="../assets/images/voiture_jaune.png"> 
+<img id="red_car" src="../assets/images/voiture_rouge.png"> 
+</div>
+
+<script>
+	$(document).keydown(function(e){
+		if (e.which == 39)
+		{
+			vjX = parseInt($('#yellow_card').css('left'));
+			if (vjX < 280)
+			$('#yellow_card').css('left', vjX+30);
+		}
+		
+		if (e.which == 37)
+		{
+			vjX = parseInt($('#yellow_card').css('left'));
+			if (vjX > 70)
+			$('#yellow_card').css('left', vjX-30);
+		}
+	}
+
+	deplace();
+function deplace(){
+	
+	$('#red_car').animate({top: '-=600'}, 2500, 'linear', function(){
+		var vrX = Math.floor(Math.random()*194)+70;
+		var vrY = 400;
+		$('#red_car').css('top',vrY);
+		$('#red_car').css('left',vrX);
+	});
+
+	$('.fond').animate({
+		top: '-=360'
+		},
+		1000,
+		'linear',
+		function(){
+			$('.fond').css('top', 0);
+			deplace();
+		});
+}
+
+</script>

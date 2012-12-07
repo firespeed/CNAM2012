@@ -26,9 +26,9 @@ int main(int argc,char* argv[],char* arge[]){
 	
 		//au programme il fera donc un exit a la fin de l'execution du programme fils
 		exit(1);
-     default:
+   //  default:
        // wait(NULL); // le pere attend que les processus fils soit terminer 
-        printf("je suis le pere parent \n");
+       // printf("je suis le pere parent \n");
      }
      return 0;
   }
@@ -55,10 +55,10 @@ void create_process(char* nom_process,int nb_process){
 			 execlp("/usr/bin/xterm",nom_process_vituel, "-e",nom_process,NULL);
 			 //TODO: intégration dans un array 
 			} 
-		default:
+		//default:
 		 // wait(NULL); // le pere attend que les processus fils soit terminer 
         /* on est dans le processus pere */
-        printf("je suis le pere \n");
+        //printf("je suis le pere \n");
 				
 		}
 	}
