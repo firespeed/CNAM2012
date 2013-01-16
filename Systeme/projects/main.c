@@ -7,34 +7,55 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+#include <sys/wait.h>
+#include <errno.h>
+
+#define LGMAX 100
+
+char tampon[LGMAX];
+	
 double frand_a_b(double a, double b);
 void create_map();
-void create_process(char* nom_process,int nb_process);
+void create_process(char* nom_process,int nb_process, int tube_param[]);
 
+	
 int main(int argc,char* argv[],char* arge[]){
   //génération map
   create_map();
-	  
-  switch (fork()) {
-     case (pid_t) -1 :  perror(""),exit(1);// break inutile
-     case (pid_t)  0 :   
-         /* on est dans le processus fils */
-         // exécution du programme fils excl(programme,nom_vituelle_prog,argument)    
-        
-       create_process("mobile",atoi(argv[1]));
-       create_process("vehicule",atoi(argv[2]));
-	
+  
+  int tube[2];
+  
+      
+       create_process("mobile",atoi(argv[1]),tube);
+       create_process("vehicule",atoi(argv[2]),tube);
+       sleep(2);
+
 		//au programme il fera donc un exit a la fin de l'execution du programme fils
-		exit(1);
-   //  default:
+		
+		while(1){
+	           char *p = tampon;    
+               close(tube[1]);
+               while (read(tube[0],p,1) != 0) p++;
+               printf("chaine lue dans le tube : %s\n",tampon);
+              
+          sleep(4);
+              
+           
+	
+	
+	}
+		
+  // default:
+        
+	
        // wait(NULL); // le pere attend que les processus fils soit terminer 
        // printf("je suis le pere parent \n");
-     }
-     return 0;
+         return 0;
   }
   
 // mise en place gestion process mobile et vehicule  
-void create_process(char* nom_process,int nb_process){
+void create_process(char* nom_process,int nb_process, int tube_param[]){
 	int i;
 
 	for (i = 1; i <= nb_process; i++)
@@ -50,9 +71,27 @@ void create_process(char* nom_process,int nb_process){
 			strcat(nom_process_vituel,"_");
 			strcat(nom_process_vituel,buf);
 			
+			//creation du descripteur
+		
+			
+			  if (pipe(tube_param) == -1) printf("erreur creation pipe");
+			  	 printf("tube[0] : %d \n",tube_param[0]);
+				printf("tube[1] : %d \n",tube_param[1]);
+			//envoie des desciprteur du pipe
+			 char* arg[6];          /* fils  transforme */                   
+           //    close(tube1[1]);
+           //    close(tube2[0]);*
+		       arg[0]="xterm";
+			   arg[1]="-e";
+			   arg[2]=nom_process;
+               arg[3] = (char*) malloc(10);sprintf(arg[3],"%d",tube_param[0]);
+               arg[4] = (char*) malloc(10);sprintf(arg[4],"%d",tube_param[1]);
+               arg[5]=NULL;
+			
 			 // création des processus mobile 
 			// execl(nom_process, nom_process_vituel,NULL);
-			 execlp("/usr/bin/xterm",nom_process_vituel, "-e",nom_process,NULL);
+			// execlp("/usr/bin/xterm",nom_process_vituel, "-e",nom_process,arg[0],arg[1],NULL);
+			 execvp("/usr/bin/xterm",arg);
 			 //TODO: intégration dans un array 
 			} 
 		//default:

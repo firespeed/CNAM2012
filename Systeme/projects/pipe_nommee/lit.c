@@ -12,7 +12,7 @@ int main(void)
 
 	char chaineALire[TAILLE_MESSAGE];
 
-	if((sortieTube = open ("essai.fifo", O_RDONLY)) == -1) 
+	if((sortieTube = open ("essadi.fifo", O_RDONLY)) == -1) 
 	{
 		fprintf(stderr, "Impossible d'ouvrir la sortie du tube nommé.\n");
 		exit(EXIT_FAILURE);
