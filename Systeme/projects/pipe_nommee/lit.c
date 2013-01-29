@@ -17,7 +17,7 @@ int main(void)
 		fprintf(stderr, "Impossible d'ouvrir la sortie du tube nommé.\n");
 		exit(EXIT_FAILURE);
 	}
-
+	printf("ok");
 	read(sortieTube, chaineALire, TAILLE_MESSAGE);
         printf("%s", chaineALire);
 

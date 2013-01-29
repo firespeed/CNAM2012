@@ -27,8 +27,8 @@ int main(int argc,char* argv[],char* arge[]){
   int tube[2];
   
       
-       create_process("mobile",atoi(argv[1]),tube);
-       create_process("vehicule",atoi(argv[2]),tube);
+       //create_process("mobile",atoi(argv[1]),tube);
+       //create_process("vehicule",atoi(argv[2]),tube);
        sleep(2);
 
 		//au programme il fera donc un exit a la fin de l'execution du programme fils
