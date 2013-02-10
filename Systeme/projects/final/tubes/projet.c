@@ -14,123 +14,99 @@ void erreur(const char* msg)      {perror(msg);exit(1);}
 
 #define LGMAX 100
   
-main(){
-	  int B_CPT[2];
-	  int CPT_B[2];
+int main(){
+	  int des_mob[2];
+	  int des_mob_read[2];
 
-	  int LCD_CPT[2];
+	 
  
   
-	if (pipe(B_CPT) == -1) erreur("pipe");
-	if (pipe(CPT_B) == -1) erreur("pipe");
+	if (pipe(des_mob) == -1) erreur("pipe");
+	if (pipe(des_mob_read) == -1) erreur("pipe");
 
-	if (pipe(LCD_CPT) == -1) erreur("pipe");
+	
   
 
-  //création du processus badge1
+  //création du processus mobile
 	switch (fork()) {
 		case -1 : erreur("fork");
 
 		case 0 : {
-			/* fils : badge1 */
+			/* fils : mobile */
 		char desc1[4]; char desc2[4];
 
-		//Fermeture des descripteurs de tubes inutiles pour badge1
-		close(B_CPT[0]); close(CPT_B[1]); close(LCD_CPT[0]) ; close(LCD_CPT[1]) ;
+		//Fermeture des descripteurs de tubes inutiles pour mobile
+		close(des_mob[0]); close(des_mob_read[1]) ;
 
-		sprintf(desc1,"%d",B_CPT[1]); /* communique num B_CPT[1] ecrire */
-		sprintf(desc2,"%d",CPT_B[0]); /* communique num CPT_B[0] lire */
+		sprintf(desc1,"%d",des_mob[1]); /* communique num des_mob[1] ecrire */
+		sprintf(desc2,"%d",des_mob_read[0]); /* communique num des_mob_read[0] lire */
 
-		if (execlp("xterm","xterm","-e","./BADGE1",desc1, desc2,NULL)==-1)
-		erreur("execlp - Badge1");
+		if (execlp("xterm","xterm","-e","./mobile",desc1, desc2,NULL)==-1)
+		erreur("execlp - mobile");
 		exit(1);
 		}
 
 		default :
 			/* pere */
 		{
-		printf("Creation Badge 1\n");
+		printf("Creation mobile \n");
 		}
 	}
 
-//creation du processus compteur
+//creation du processus central
 	switch (fork()) {
 		case -1 : erreur("fork");
 
 		case 0 : {
-			/* fils : compteur */
-		char desc1[4]; char desc2[4]; char desc3[4];
+			/* fils : central */
+		char desc1[4]; char desc2[4]; 
 
-		//Fermeture des descripteurs de tubes inutiles pour compteur
-		close(B_CPT[1]); close(CPT_B[0]); close(LCD_CPT[0]);
+		//Fermeture des descripteurs de tubes inutiles pour central
+		close(des_mob[1]); close(des_mob_read[0]); 
 
-		sprintf(desc1,"%d",B_CPT[0]); /* communique num B_CPT[1] ecrire */
-		sprintf(desc2,"%d",CPT_B[1]); /* communique num CPT_B[0] lire */
-		sprintf(desc3,"%d",LCD_CPT[1]);
+		sprintf(desc1,"%d",des_mob[0]); /* communique num des_mob[1] lire */
+		sprintf(desc2,"%d",des_mob_read[1]); /* communique num des_mob_read[1] ecrire */
+	
 
-		if (execlp("xterm","xterm","-e","./COMPTEUR",desc1,desc2,desc3,NULL)==-1)
-		erreur("execlp - Compteur");
+		if (execlp("xterm","xterm","-e","./central",desc1,desc2,NULL)==-1)
+		erreur("execlp - central");
 		exit(1);
 		}
 
 		default :
 			/* pere */
 		{
-		printf("Creation Compteur\n");
+		printf("Creation central\n");
 		}
 	}
 	
 
-//création du processus badge2
+//création du processus vehicule
 	switch (fork()) {
 		case -1 : erreur("fork");
 
 		case 0 : {
-			/* fils : badge2 */
+			/* fils : vehicule */
 		char desc1[4]; char desc2[4];
 
-		//Fermeture des descripteurs de tubes inutiles pour badge2
-		close(B_CPT[0]); close(CPT_B[1]); close(LCD_CPT[0]) ; close(LCD_CPT[1]) ;
+		//Fermeture des descripteurs de tubes inutiles pour vehicule
+		close(des_mob[0]); close(des_mob_read[1]); 
 
-		sprintf(desc1,"%d",B_CPT[1]); /* communique num B_CPT[1] ecrire */
-		sprintf(desc2,"%d",CPT_B[0]); /* communique num CPT_B[0] lire */
+		sprintf(desc1,"%d",des_mob[1]); /* communique num des_mob[1] ecrire */
+		sprintf(desc2,"%d",des_mob_read[0]); /* communique num des_mob_read[0] lire */
 
-		if (execlp("xterm","xterm","-e","./BADGE2",desc1, desc2,NULL)==-1)
-		erreur("execlp - Badge2");
+		if (execlp("xterm","xterm","-e","./vehicule",desc1, desc2,NULL)==-1)
+		erreur("execlp - vehicule");
 		exit(1);
 		}
 
 		default :
 			/* pere */
 		{
-		printf("Creation Badge 2\n");
+		printf("Creation vehicule \n");
 		}
 	}
 
-//création du processus LCD
-	switch (fork()) {
-		case -1 : erreur("fork");
-
-		case 0 : {
-			/* fils : lcd */
-		char desc1[4]; char desc2[4]; 
-
-		//Fermeture des descripteurs de tubes inutiles pour lcd
-		close(LCD_CPT[1]); close(B_CPT[0]); close(CPT_B[1]); close(B_CPT[1]); close(CPT_B[0]);
-
-		sprintf(desc1,"%d",LCD_CPT[0]); /* communique num LCD_CPT[0] lire */
-
-		if (execlp("xterm","xterm","-e","./LCD",desc1,NULL)==-1)
-		erreur("execlp - Compteur");
-		exit(1);
-		}
-
-		default :
-			/* pere */
-		{
-		printf("Creation LCD\n");
-		}
-	}
   }
                
                

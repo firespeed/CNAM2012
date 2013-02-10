@@ -10,15 +10,15 @@ int main(int argc,char* argv[])
 {
 	int descr1 = atoi(argv[1]);
 	int descw1 = atoi(argv[2]);
-	int descw2 = atoi(argv[3]);
+
 	char tampon[LGMAX];
 	
 	char entre;
-
-	int nbVehicule = 0;
+	char response[50];
+	
 	
 
-	printf("COMPTEUR :\n");
+	printf("central :\n");
 
 
 while(1){
@@ -31,15 +31,18 @@ while(1){
 	printf("Traitement ...\n");
 	sleep(2);
 	if(entre=='0'){
-		nbVehicule++;
+		//~ tratement mobile 
+	strcpy(response,"vehicule_0");
 	
+	 write(descw1,response,strlen(response)+1);
+	 printf("ok");
 	}
 	if(entre=='1'){
-		nbVehicule--;
+		//~ traitement vehicule 
 	}
-	write(descw2,tampon,strlen(tampon)+1);
 
-	printf(" NB de Vehicules : %d \n", nbVehicule);
+
+	printf(" envoie msg en vehicule! \n");
 	fflush(stdout);
        
 }    
