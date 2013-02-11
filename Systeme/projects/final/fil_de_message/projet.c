@@ -18,91 +18,74 @@ void erreur(const char* msg)      {perror(msg);exit(1);}
 
 int msgid, tailleMsg;
   
-main(){
+int main(){
   
 	if ((msgid = msgget(cle,IPC_CREAT  | IPC_EXCL | 0600)) == -1) 
 		erreur("Pb msgget 1");
 
 	printf("Creation de la file de message %d\n",msgid);
 
-//création du processus badge1
+//création du processus mobile
 	switch (fork()) {
 		case -1 : erreur("fork");
 
 		case 0 : {
-			/* fils : badge1 */
+			/* fils : mobile */
 
-		if (execlp("xterm","xterm","-e","./BADGE1",NULL)==-1)
-		erreur("execlp - Badge1");
+		if (execlp("xterm","xterm","-e","./mobile",NULL)==-1)
+		erreur("execlp - mobile");
 		exit(1);
 		}
 
 		default :
 			/* pere */
 		{
-		printf("Creation Badge 1\n");
+		printf("Creation mobile\n");
 		}
 	}
 
-//creation du processus compteur
+//creation du processus central
 	switch (fork()) {
 		case -1 : erreur("fork");
 
 		case 0 : {
-			/* fils : compteur */
+			/* fils : central */
 
-		if (execlp("xterm","xterm","-e","./COMPTEUR",NULL)==-1)
-		erreur("execlp - Compteur");
+		if (execlp("xterm","xterm","-e","./central",NULL)==-1)
+		erreur("execlp - central");
 		exit(1);
 		}
 
 		default :
 			/* pere */
 		{
-		printf("Creation Compteur\n");
+		printf("Creation central\n");
 		}
 	}
 	
 
-//création du processus badge2
+//création du processus vehicule
 	switch (fork()) {
 		case -1 : erreur("fork");
 
 		case 0 : {
-			// fils : badge2 
+			// fils : vehicule 
 
-		//Fermeture des descripteurs de tubes inutiles pour badge1; 
+		
 
-		if (execlp("xterm","xterm","-e","./BADGE2",NULL)==-1)
-		erreur("execlp - Badge2");
+		if (execlp("xterm","xterm","-e","./vehicule",NULL)==-1)
+		erreur("execlp - vehicule");
 		exit(1);
 		}
 
 		default :
 			// pere 
 		{
-		printf("Creation Badge 2\n");
+		printf("Creation vehicule\n");
 		}
 	}
 
-//création du processus LCD
-	switch (fork()) {
-		case -1 : erreur("fork");
 
-		case 0 : {
-			// fils : lcd 
-
-		if (execlp("xterm","xterm","-e","./LCD",NULL)==-1)
-		erreur("execlp - Compteur");
-		exit(1);
-		}
-
-		default :
-			// pere 
-		{
-		printf("Creation LCD\n");
-		}
-	}
 
 /* destruction de la file */
 

@@ -14,7 +14,7 @@ int msgid, tailleMsg;
 typedef struct {
         long  type;
 	char num[20];
-	int numBadge;
+	int numDesti;
 	int nbV;
         } tMessage;
 
@@ -25,7 +25,7 @@ int main(int argc,char* argv[])
 	int  msgid, tailleMsg;;
 	tMessage req, rep;	
 
-	char carte[20];
+	char carte[20]={'\0'};
 ;
   
   tailleMsg = sizeof(tMessage) - sizeof(long);
@@ -35,37 +35,37 @@ int main(int argc,char* argv[])
        exit(1);
        };
 
-  if ((msgid = msgget(cle, 0)) == -1) 
-     erreur("Pb msgget dans Badge2");
-
+  if ((msgid = msgget(cle, 0)) == -1) // creation de l'identifiant
+     erreur("Pb msgget dans mobile");
+     
 	while(1){
-
-		printf("Inserez votre badge : \n");
+                
+		printf("Où voulez vous aller : \n");
 		scanf("%s",carte);
-		sleep(3);
+                sleep(1);
 		
 		/* construction message req */
 		req.type = 1;
 		strcpy(req.num, carte);
-		req.numBadge=2;
+		req.numDesti=1;
                 printf("*** Message built.\n");
                 sleep(3);
 		/* ... */
 
 		/* envoi message req */
 		msgsnd(msgid, &req, tailleMsg, 0);
-		printf("*** Message sent.\n");
+                printf("*** Message sent.\n");
                 sleep(3);
-                /* ... */
-		  
+		/* ... */
+		
 		/* reponse message rep */
 		msgrcv(msgid, &rep, tailleMsg, 2, 0);
-		if (rep.numBadge==2) printf("\nVehicule sorti !\n");
-                printf("*** ACK received from COMPTEUR.\n");
+		if (rep.numDesti==1) printf("\nVehicule vient vous chercher !\n");
+                printf("*** ACK received from central.\n");
                 sleep(10);
                 system("clear");
+                
 		/* ... */
-	
   
 	}
 

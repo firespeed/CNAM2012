@@ -14,7 +14,7 @@ int msgid, tailleMsg;
 typedef struct {
         long  type;
 	char num[20];
-	int numBadge;
+	int numDesti;
 	int nbV;
         } tMessage;
 
@@ -36,18 +36,18 @@ int main(int argc,char* argv[])
        };
 
   if ((msgid = msgget(cle, 0)) == -1) 
-     erreur("Pb msgget dans Badge2");
+     erreur("Pb msgget dans vehicule");
 
 	while(1){
 
-		printf("Inserez votre badge : \n");
+		printf("Inserez votre vehicule : \n");
 		scanf("%s",carte);
 		sleep(3);
 		
 		/* construction message req */
 		req.type = 1;
 		strcpy(req.num, carte);
-		req.numBadge=2;
+		req.numDesti=2;
                 printf("*** Message built.\n");
                 sleep(3);
 		/* ... */
@@ -60,8 +60,8 @@ int main(int argc,char* argv[])
 		  
 		/* reponse message rep */
 		msgrcv(msgid, &rep, tailleMsg, 2, 0);
-		if (rep.numBadge==2) printf("\nVehicule sorti !\n");
-                printf("*** ACK received from COMPTEUR.\n");
+		if (rep.numDesti==2) printf("\n course fini !\n");
+                printf("*** ACK received from central.\n");
                 sleep(10);
                 system("clear");
 		/* ... */
