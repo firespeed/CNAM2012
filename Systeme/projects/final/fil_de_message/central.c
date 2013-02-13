@@ -14,7 +14,7 @@ int msgid, tailleMsg;
 typedef struct {
         long  type;
 	char num[20];
-	int numBadge;
+	int numDesti;
 	int nbV;
         } tMessage;
 
@@ -22,7 +22,7 @@ void erreur(const char* msg) {perror(msg);exit(1);}
 
 int main(int argc,char* argv[])
 {
-	int  msgid, tailleMsg,nbVehicules=0;
+	int  msgid, tailleMsg;
 	tMessage req, rep, rep2;	
 	char carte[20];
   
@@ -35,7 +35,7 @@ int main(int argc,char* argv[])
 
 
   if ((msgid = msgget(cle, 0)) == -1) // creation de l'identifiant
-     erreur("Pb msgget dans COMPTEUR");
+     erreur("Pb msgget dans central");
      
 	while(1){
 		/* construction message req */
@@ -43,25 +43,25 @@ int main(int argc,char* argv[])
 	  
 		
 		/* reception message rep */
-		msgrcv(msgid, &rep, tailleMsg, 1, 0); //reception badge
+		msgrcv(msgid, &rep, tailleMsg, 1, 0); //reception mobile
 		
 		/* ... */
 
 		rep2.type=2;
-		rep2.numBadge=rep.numBadge;
+		rep2.numDesti=rep.numDesti;
 
 		/* traitement message */
-		if (rep.numBadge==1){
-                        printf("*** Message received from BADGE1.\n");
+		if (rep.numDesti==1){
+                        printf("*** Message received from mobile.\n");
                         sleep(3);
-			nbVehicules++;
-                        printf("*** Sending ACK to BADGE1.\n");
+		
+                        printf("*** Sending ACK to mobile.\n");
                         sleep(3);
 			msgsnd(msgid, &rep2, tailleMsg, 0);
 			printf("Voiture %s entree.\n",rep.num);
 		}
 		else {
-			printf("*** Message received from BADGE2.\n");
+			printf("*** Message received from vehicule.\n");
 		        sleep(3);
 
                         if (nbVehicules > 0){
@@ -73,20 +73,12 @@ int main(int argc,char* argv[])
 				printf("Aucune voiture dans le parking\n");
 			}
 			
-                        printf("*** Sending ACK to BADGE1.\n");
+                        printf("*** Sending ACK to mobile.\n");
                         sleep(3);
 			msgsnd(msgid, &rep2, tailleMsg, 0);
 		}
 
 		
-		req.nbV=nbVehicules;
-		/* envoi message req */
-                printf("*** Sending message to LCD.\n");
-                sleep(3);
-		msgsnd(msgid, &req, tailleMsg, 0);
-                sleep(10);
-                system("clear");
-		/* ... */
 		
                 fflush(stdout);		
 
