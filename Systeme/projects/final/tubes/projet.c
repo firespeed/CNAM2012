@@ -24,6 +24,8 @@ int main(){
 	if (pipe(des_mob) == -1) erreur("pipe");
 	if (pipe(des_mob_read) == -1) erreur("pipe");
 
+
+
 	
   
 
@@ -52,6 +54,8 @@ int main(){
 		printf("Creation mobile \n");
 		}
 	}
+	
+	
 
 //creation du processus central
 	switch (fork()) {

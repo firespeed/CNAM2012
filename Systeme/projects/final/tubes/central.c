@@ -10,13 +10,13 @@ int main(int argc,char* argv[])
 {
 	int descr1 = atoi(argv[1]);
 	int descw1 = atoi(argv[2]);
-
+	
 	char tampon[LGMAX];
 	
-	char entre;
+	char message[LGMAX];
 	char response[50];
 	
-	
+	char entre;
 
 	printf("central :\n");
 
@@ -24,25 +24,27 @@ int main(int argc,char* argv[])
 while(1){
 	
 
-	read(descr1,tampon,LGMAX)>0;
+	read(descr1,message,LGMAX)>0;
 	
-	entre = tampon[strlen(tampon)-1];
+	printf("%s",message);
 	
 	printf("Traitement ...\n");
 	sleep(2);
-	if(entre=='0'){
-		//~ tratement mobile 
-	strcpy(response,"vehicule_0");
+if(strncmp(message,"vehicule",8)==0){
+		//~ traitement mobile
+
+		write(descw1,message,sizeof(message));
+		printf(" envoie msg en mobile! \n");
+	}
+	if(strncmp(message,"mobile",6)==0){
+		//~ traitement vehicule
+
+		write(descw1,message,sizeof(message));
+		printf(" envoie msg en vehicule! \n");
+	}
+
+
 	
-	 write(descw1,response,strlen(response)+1);
-	 printf("ok");
-	}
-	if(entre=='1'){
-		//~ traitement vehicule 
-	}
-
-
-	printf(" envoie msg en vehicule! \n");
 	fflush(stdout);
        
 }    

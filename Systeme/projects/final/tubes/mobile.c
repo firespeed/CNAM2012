@@ -10,19 +10,28 @@ int main(int argc,char* argv[])
 {
 	int descw = atoi(argv[1]);
 	int descr = atoi(argv[2]);
-	char tampon[LGMAX];
+	
 
-	char carte[4];
-
+	char message[LGMAX];
+printf("Que voulez vous faire :\n");
+		scanf("%s",message);
+		
+		write(descw,message,sizeof(message));
 	while(1){
 	
-		printf("mobile :\n");
-		scanf("%s",carte);
+				
+printf("reception message :\n");
+	if(read(descr,message,sizeof(message))==0)
+printf("erreur");
+	
+
+	if(strncmp(message,"vehicule",8)==0){
+	printf("response vehicule: %s\n",message);
+	printf("Que voulez vous faire ");
+	scanf("%s",message);
 		
-		strcpy(tampon, carte);
-		strcat(tampon,"0");
-			
-		write(descw,tampon,strlen(tampon)+1);
+	write(descw,message,sizeof(message));
+}
 			  
 	}
      
