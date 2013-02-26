@@ -7,7 +7,7 @@
 #include <sys/msg.h>
 #include <string.h>
 
-#define cle 314
+#define cle 318
 
 int msgid, tailleMsg;
 
@@ -45,7 +45,7 @@ int main(int argc,char* argv[])
                 sleep(1);
 		
 		/* construction message req */
-		req.type = 1;
+		req.type = 1;//id mobile 1
 		strcpy(req.num, carte);
 		req.numDesti=1;
                 printf("*** Message built.\n");
@@ -59,7 +59,7 @@ int main(int argc,char* argv[])
 		/* ... */
 		
 		/* reponse message rep */
-		msgrcv(msgid, &rep, tailleMsg, 2, 0);
+		msgrcv(msgid, &rep, tailleMsg, 3, 0);
 		if (rep.numDesti==1) printf("\nVehicule vient vous chercher !\n");
                 printf("*** ACK received from central.\n");
                 sleep(10);

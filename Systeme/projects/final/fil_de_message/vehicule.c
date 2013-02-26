@@ -7,7 +7,7 @@
 #include <sys/msg.h>
 #include <string.h>
 
-#define cle 314
+#define cle 318
 
 int msgid, tailleMsg;
 
@@ -39,6 +39,12 @@ int main(int argc,char* argv[])
      erreur("Pb msgget dans vehicule");
 
 	while(1){
+/* reception message rep */
+		msgrcv(msgid, &rep, tailleMsg, 2, 0); //reception compteur
+		
+		/* ... */
+        printf("Nombre de vehicules : %d\n",rep.num);	
+        fflush(stdout);
 
 		printf("Inserez votre vehicule : \n");
 		scanf("%s",carte);
@@ -58,13 +64,7 @@ int main(int argc,char* argv[])
                 sleep(3);
                 /* ... */
 		  
-		/* reponse message rep */
-		msgrcv(msgid, &rep, tailleMsg, 2, 0);
-		if (rep.numDesti==2) printf("\n course fini !\n");
-                printf("*** ACK received from central.\n");
-                sleep(10);
-                system("clear");
-		/* ... */
+	
 	
   
 	}

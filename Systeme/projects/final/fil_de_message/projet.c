@@ -12,7 +12,7 @@
 #include <sys/msg.h>
 #include <string.h>
 
-#define cle 314
+#define cle 318
 
 void erreur(const char* msg)      {perror(msg);exit(1);}
 

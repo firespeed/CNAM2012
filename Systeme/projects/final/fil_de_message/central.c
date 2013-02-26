@@ -7,12 +7,12 @@
 #include <sys/msg.h>
 #include <string.h>
 
-#define cle 314
+#define cle 318
 
 int msgid, tailleMsg;
 
 typedef struct {
-        long  type;
+	 long  type;
 	char num[20];
 	int numDesti;
 	int nbV;
@@ -22,8 +22,8 @@ void erreur(const char* msg) {perror(msg);exit(1);}
 
 int main(int argc,char* argv[])
 {
-	int  msgid, tailleMsg;
-	tMessage req, rep, rep2;	
+	int  msgid, tailleMsg;;
+	 tMessage req, rep, rep2;	
 	char carte[20];
   
   tailleMsg = sizeof(tMessage) - sizeof(long);
@@ -47,32 +47,25 @@ int main(int argc,char* argv[])
 		
 		/* ... */
 
-		rep2.type=2;
+		
 		rep2.numDesti=rep.numDesti;
 
 		/* traitement message */
 		if (rep.numDesti==1){
+			rep2.type=2;
                         printf("*** Message received from mobile.\n");
                         sleep(3);
 		
-                        printf("*** Sending ACK to mobile.\n");
+                        printf("*** Sending to vehicule.\n");
                         sleep(3);
 			msgsnd(msgid, &rep2, tailleMsg, 0);
-			printf("Voiture %s entree.\n",rep.num);
+			
 		}
 		else {
 			printf("*** Message received from vehicule.\n");
 		        sleep(3);
-
-                        if (nbVehicules > 0){
-                                nbVehicules--;
-			        printf("Voiture %s sortie\n",rep.num);
-				
-			}
-			if (nbVehicules == 0) {		
-				printf("Aucune voiture dans le parking\n");
-			}
-			
+rep2.type=3;
+                     		
                         printf("*** Sending ACK to mobile.\n");
                         sleep(3);
 			msgsnd(msgid, &rep2, tailleMsg, 0);

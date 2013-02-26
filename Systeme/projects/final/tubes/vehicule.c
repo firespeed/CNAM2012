@@ -5,46 +5,6 @@
 #include <string.h>
 
 #define LGMAX 100
-//~ 
-//~ struct chaine_caract{
-//~ char pid_mobile[50];
-//~ char emplacement[50];
-//~ char dest[50];
-//~ 
-//~ };
-//~ 
-//~ chaine_caract construct_table_space(char *orig){
-	//~ int i=0;
-	//~ chaine_caract table_space;
-	//~ unsigned short position = 0;
-	 //~ while(orig[position] != '\0'){
-		//~ if(orig[position] != '_')
-		//~ {
-			//~ if(i==0){
-			//~ strcat(table_space.pid_mobile,'\0');
-		//~ }
-		//~ else if(i==1){
-			//~ strcat(table_space.emplacement,'\0');
-		//~ }
-					//~ 
-			//~ i++;
-		//~ }
-		//~ else if(i==0){
-			//~ strcat(table_space.pid_mobile,orig[position]);
-		//~ }
-		//~ else if(i==1){
-			//~ strcat(table_space.emplacement,orig[position]);
-		//~ }
-		//~ else if(i==2){
-			//~ strcat(table_space.dest,orig[position]);
-		//~ }
-		//~ 
-			//~ position++;
-	//~ 
-	//~ }
-	//~ strcat(table_space.dest,'\0');
-//~ return table_space ;
-//~ };
 
 struct compo_struct {
   char pid[50];

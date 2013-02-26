@@ -25,7 +25,7 @@ printf("reception message :\n");
 printf("erreur");
 	
 
-	if(strncmp(message,"vehicule",8)==0){
+	if(strncmp(message,"vehicule",6)==0){
 	printf("response vehicule: %s\n",message);
 	printf("Que voulez vous faire ");
 	scanf("%s",message);
