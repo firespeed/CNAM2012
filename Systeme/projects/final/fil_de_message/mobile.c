@@ -47,6 +47,7 @@ int main(int argc,char* argv[])
 		/* construction message req */
 		req.type = 1;//id mobile 1
 		strcpy(req.num, carte);
+		char carte[20]={'\0'};
 		req.numDesti=1;
                 printf("*** Message built.\n");
                 sleep(3);

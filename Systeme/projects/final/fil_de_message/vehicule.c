@@ -43,10 +43,10 @@ int main(int argc,char* argv[])
 		msgrcv(msgid, &rep, tailleMsg, 2, 0); //reception compteur
 		
 		/* ... */
-        printf("Nombre de vehicules : %d\n",rep.num);	
+        printf("demande de central : %s\n",rep.num);	
         fflush(stdout);
 
-		printf("Inserez votre vehicule : \n");
+		printf("répondre : \n");
 		scanf("%s",carte);
 		sleep(3);
 		
