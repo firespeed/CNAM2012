@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT lesProjets (projet+, employé+)>
+<!ELEMENT projet (but, membre_équipe+)>
+<!ELEMENT employé (nom, tâches+)>
+
+<!ELEMENT but (#PCDATA)>
+<!ELEMENT membre_équipe EMPTY>
+
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT tâches EMPTY>
+
+<!ATTLIST tâches projet_id IDREF #REQUIRED>
+<!ATTLIST projet projet_id ID #REQUIRED>
+<!ATTLIST membre_équipe employé IDREF #REQUIRED>
+<!ATTLIST employé numéro_sécu ID #REQUIRED>

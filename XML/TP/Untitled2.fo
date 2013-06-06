@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xf="http://www.ecrion.com/xf/1.0">
+	<xf:annotation id="3488F0E8">
+		<xf:javascript>app.alert("This is a button");</xf:javascript>
+	</xf:annotation>
+	<xf:annotation id="4B38F426">
+		<xf:javascript>app.alert("This is a radioButton");</xf:javascript>
+	</xf:annotation>
+	<xf:annotation id="6908F47E">
+		<xf:javascript>app.alert("This is a CheckBox");</xf:javascript>
+	</xf:annotation>
+	<xf:annotation id="5C29F4EF">
+		<xf:javascript>app.alert("This is EditBox");</xf:javascript>
+	</xf:annotation>
+	<fo:layout-master-set>
+		<fo:simple-page-master master-name="first-page" page-width="8.5in" page-height="11in">
+			<fo:region-body region-name="xsl-region-body" margin="0.7in" column-gap="0.6in" padding="6pt"/>
+			<fo:region-before region-name="xsl-region-before" extent="0.7in" display-align="after" padding="6pt 0.7in"/>
+			<fo:region-after region-name="xsl-region-after" extent="0.7in" display-align="before" padding="6pt 0.7in"/>
+		</fo:simple-page-master>
+		<fo:simple-page-master master-name="all-pages" page-width="11in" page-height="8.5in">
+			<fo:region-body region-name="xsl-region-body" margin="0.1in 0.35in" column-count="4" column-gap="0.6in"/>
+		</fo:simple-page-master>
+		<fo:page-sequence-master master-name="default-sequence">
+			<fo:single-page-master-reference master-reference="first-page"/>
+			<fo:repeatable-page-master-reference master-reference="all-pages"/>
+		</fo:page-sequence-master>
+		<fo:page-sequence-master master-name="custom-sequence">
+			<fo:repeatable-page-master-reference master-reference="all-pages"/>
+		</fo:page-sequence-master>
+	</fo:layout-master-set>
+	<fo:page-sequence master-reference="default-sequence">
+		<fo:static-content flow-name="xsl-region-before" border-bottom-style="solid" border-bottom-width="1pt" border-bottom-color="rgb(192,192,192)" font-size="10pt" font-family="Helvetica">
+			<fo:block color="rgb(105,105,105)" text-align-last="justify">
+				XSL-FO Test Suite
+				<fo:leader/>
+				<fo:inline font-size="10pt" font-weight="normal">
+				Page <fo:page-number/> of <fo:page-number-citation ref-id="xf#theEnd"/>
+				</fo:inline>
+			</fo:block>
+		</fo:static-content>
+		<fo:static-content flow-name="xsl-region-after" padding-top="2pt" border-top-style="solid" border-top-width="1pt" border-top-color="rgb(192,192,192)">
+			<fo:table table-layout="fixed" width="100%">
+				<fo:table-column column-width="proportional-column-width(4)"/>
+				<fo:table-column column-width="proportional-column-width(1)"/>
+				<fo:table-body>
+					<fo:table-row>
+						<fo:table-cell>
+							<fo:block color="rgb(105,105,105)" font-size="8pt" font-family="Helvetica">
+								Copyright © 2002-2011 Ecrion Software Inc. All Rights Reserved.
+							</fo:block>
+						</fo:table-cell>
+						<fo:table-cell>
+							<fo:block text-align="right" color="rgb(105,105,105)" font-size="8pt" font-family="Helvetica">
+								<fo:instream-foreign-object>
+									<svg:svg xmlns:svg="http://www.w3.org/2000/svg" width="64" height="46" viewBox="0 0 744 514" scaling="non-uniform">
+										<svg:defs id="defs4">
+											<svg:linearGradient id="linearGradient1308" x1="0%" x2="100%" y1="0%" y2="0%">
+												<svg:stop id="stop1310" style="stop-color:#24ff2c;stop-opacity:1.0000000;" offset="0"/>
+												<svg:stop id="stop1312" style="stop-color:#228f1e;stop-opacity:1.0000000;" offset="1"/>
+											</svg:linearGradient>
+											<svg:linearGradient xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient1314" xlink:href="#linearGradient1308" gradientUnits="userSpaceOnUse" x1="102.857" x2="112.857" y1="126.648" y2="172.362"/>
+											<svg:linearGradient xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient2064" xlink:href="#linearGradient1308" gradientUnits="userSpaceOnUse" x1="94.2857" x2="112.857" y1="143.791" y2="172.362"/>
+											<svg:linearGradient xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient2068" xlink:href="#linearGradient1308" gradientUnits="userSpaceOnUse" x1="102.857" x2="112.857" y1="126.648" y2="172.362"/>
+											<svg:linearGradient xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient2072" xlink:href="#linearGradient1308" gradientUnits="userSpaceOnUse" x1="102.857" x2="112.857" y1="126.648" y2="172.362"/>
+											<svg:linearGradient xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient2076" xlink:href="#linearGradient1308" gradientUnits="userSpaceOnUse" x1="102.857" x2="112.857" y1="126.648" y2="172.362"/>
+											<svg:linearGradient xmlns:xlink="http://www.w3.org/1999/xlink" id="linearGradient2080" xlink:href="#linearGradient1308" gradientUnits="userSpaceOnUse" x1="102.857" x2="112.857" y1="126.648" y2="172.362"/>
+										</svg:defs>
+										<svg:g id="layer1" transform="translate(0,-130)">
+											<svg:path id="path2824" style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#17cf0d;stroke-width:10.489111;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000" d="M385.118,348.54 C646.31,435.042 646.31,435.042 646.31,435.042 "/>
+											<svg:path id="path2822" style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#17cf0d;stroke-width:7.9545941;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000" d="M536.667,267.948 C374.762,348.205 374.762,348.205 374.762,348.205 "/>
+											<svg:path id="path2818" style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#17cf0d;stroke-width:9.5815039;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000" d="M91.7553,282.151 C376.816,348.287 376.816,348.287 376.816,348.287 "/>
+											<svg:path id="path2826" style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#17cf0d;stroke-width:6.1257629;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000" d="M380.774,344.069 C325.511,483.512 325.511,483.512 325.511,483.512 "/>
+											<svg:path id="path2090" style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#17cf0d;stroke-width:8.0982771;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000" d="M279.788,198.404 C374.497,340.606 374.497,340.606 374.497,340.606 "/>
+											<svg:path id="path1306" transform="translate(176.571,56.8571) " style="fill:url(#linearGradient1314);fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000" d="M142.857,156.648 A30,30 0 1,1 82.8571,156.648 A30,30 0 1,1 142.857,156.648 z "/>
+											<svg:path id="path2062" transform="translate(426.857,110.857) " style="fill:url(#linearGradient2064);fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000" d="M142.857,156.648 A30,30 0 1,1 82.8571,156.648 A30,30 0 1,1 142.857,156.648 z "/>
+											<svg:path id="path2066" transform="translate(264.286,187.143) " style="fill:url(#linearGradient2068);fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000" d="M142.857,156.648 A30,30 0 1,1 82.8571,156.648 A30,30 0 1,1 142.857,156.648 z "/>
+											<svg:path id="path2070" transform="translate(535.429,277.143) " style="fill:url(#linearGradient2072);fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000" d="M142.857,156.648 A30,30 0 1,1 82.8571,156.648 A30,30 0 1,1 142.857,156.648 z "/>
+											<svg:path id="path2074" transform="matrix(1.90909,0,0,1.8,107.818,222.967) " style="fill:url(#linearGradient2076);fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000" d="M142.857,156.648 A30,30 0 1,1 82.8571,156.648 A30,30 0 1,1 142.857,156.648 z "/>
+											<svg:path id="path2078" transform="translate(-27.1429,126.857) " style="fill:url(#linearGradient2080);fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000" d="M142.857,156.648 A30,30 0 1,1 82.8571,156.648 A30,30 0 1,1 142.857,156.648 z "/>
+										</svg:g>
+									</svg:svg>
+								</fo:instream-foreign-object>
+							</fo:block>
+						</fo:table-cell>
+					</fo:table-row>
+				</fo:table-body>
+			</fo:table>
+		</fo:static-content>
+		<fo:flow flow-name="xsl-region-body" font-family="Times">
+			<fo:block>&#x00A0;</fo:block>
+			<fo:block >&#x00A0;</fo:block>
+			<fo:block >&#x00A0;</fo:block>
+			<fo:block >&#x00A0;</fo:block>
+			<fo:block >&#x00A0;</fo:block>
+			<fo:block >&#x00A0;</fo:block>
+			<fo:block >&#x00A0;</fo:block>
+			<fo:block><fo:block keep-together.within-line="always" keep-together.within-column="always" keep-together.within-page="always">
+					<fo:table>
+						<fo:table-column column-width="50%" column-number="1"/>
+						<fo:table-column column-width="50%" column-number="2"/>
+						<fo:table-header>
+							<fo:table-row border-bottom-width="3px" border-bottom-style="solid" border-bottom-color="rgb(255,255,255)">
+								<fo:table-cell number-columns-spanned="2">
+									<fo:block>
+										<fo:table border-top-left-radius="20pt 20pt" border-top-right-radius="20pt 20pt" margin-left="-0.096mm" width="auto" background-color="rgb(193,39,45)" table-layout="fixed">
+											<fo:table-column column-width="proportional-column-width(1)"/>
+											<fo:table-body>
+												<fo:table-row>
+													<fo:table-cell color="rgb(255,255,255)" text-align="center" font-size="25pt" font-family="Helvetica">
+														<fo:block padding-top="10pt" padding-bottom="10pt">PDF Form Examples</fo:block>
+													</fo:table-cell>
+												</fo:table-row>
+											</fo:table-body>
+										</fo:table>
+									</fo:block>
+								</fo:table-cell>
+							</fo:table-row>
+							<fo:table-row border-bottom-style="solid" border-bottom-width="3px" border-bottom-color="rgb(255,255,255)">
+								<fo:table-cell border-right-style="solid" border-right-width="3px" border-right-color="rgb(255,255,255)" padding-top="15pt" padding-left="10pt" padding-right="10pt" background-color="rgb(206,218,196)">
+									<fo:block>
+										<xf:form>
+											<fo:block>This is a form with a group of controls:</fo:block>
+											<fo:block> </fo:block>
+											<fo:block>Button :          <xf:form-control value="Button1" xf:type="button" xf:name="button3CA6E40E1"/></fo:block>
+											<fo:block>RadioButton: <xf:form-control type="radiobutton" name="radiobutton6020E413"/> </fo:block>
+											<fo:block>CheckBox:     <xf:form-control type="checkbox" name="checkboxF90E427D1"/> </fo:block>
+											<fo:block>EditBox:        <xf:form-control type="text" name="text363AE4331"/> </fo:block>
+										</xf:form>
+									</fo:block>
+									<fo:block> </fo:block>
+								</fo:table-cell>
+								<fo:table-cell border-left-style="solid" border-left-width="3px" border-left-color="rgb(255,255,255)" border-right-style="solid" border-right-width="3px" border-right-color="rgb(255,255,255)" padding-top="15pt" padding-left="10pt" padding-right="10pt" background-color="rgb(206,218,196)">
+									<fo:block>
+										<xf:form>
+											<fo:block font-weight="normal">This is a form with Ocean Theme:</fo:block>
+											<fo:block> </fo:block>
+											<fo:block>Button :          <xf:form-control value="Button1" type="button" name="button3CA6E40E2" fo:color="rgb(89,131,228)" fo:background-color="rgb(205,214,248)"/></fo:block>
+											<fo:block>RadioButton: <xf:form-control type="radiobutton" name="radiobutton6020E417" fo:color="rgb(89,131,228)" fo:background-color="rgb(205,214,248)"/> </fo:block>
+											<fo:block>CheckBox:     <xf:form-control type="checkbox" name="checkboxF90E427D2" fo:color="rgb(89,131,228)" fo:background-color="rgb(205,214,248)"/> </fo:block>
+											<fo:block>EditBox:        <xf:form-control type="text" name="text363AE4332" fo:color="rgb(89,131,228)" fo:background-color="rgb(205,214,248)"/></fo:block>
+										</xf:form>
+									</fo:block>
+									<fo:block> </fo:block>
+								</fo:table-cell>
+							</fo:table-row>
+						</fo:table-header>
+						<fo:table-body>
+							<fo:table-row display-align="center" border-bottom-style="solid" border-bottom-width="3px" border-bottom-color="rgb(255,255,255)">
+								<fo:table-cell id="198F80B" border-right-style="solid" border-right-width="3px" border-right-color="rgb(255,255,255)" padding-top="15pt" padding-left="15pt" padding-bottom="15pt" background-color="rgb(230,231,232)">
+									<fo:block>
+										<xf:form>
+											<fo:block font-weight="normal">This is a form with Mint Theme:</fo:block>
+											<fo:block> </fo:block>
+											<fo:block>Button :          <xf:form-control value="Button1" type="button" name="button3CA6E40E3" fo:color="black" fo:background-color="rgb(11,162,54)"/></fo:block>
+											<fo:block>RadioButton: <xf:form-control type="radiobutton" name="radiobutton6020E419" fo:color="black" fo:background-color="rgb(11,162,54)"/> </fo:block>
+											<fo:block>CheckBox:     <xf:form-control type="checkbox" name="checkboxF90E427D3" fo:color="black" fo:background-color="rgb(11,162,54)"/> </fo:block>
+											<fo:block>EditBox:        <xf:form-control type="text" name="text363AE4333" fo:color="black" fo:background-color="rgb(11,162,54)"/></fo:block>
+										</xf:form>
+									</fo:block>
+									<fo:block> </fo:block>
+								</fo:table-cell>
+								<fo:table-cell id="198F80B" border-right-style="solid" border-right-width="3px" border-right-color="rgb(255,255,255)" padding-top="15pt" padding-left="15pt" padding-bottom="15pt" background-color="rgb(230,231,232)">
+									<fo:block>
+										<xf:form>
+											<fo:block font-weight="normal">This is a form with Fire Theme:</fo:block>
+											<fo:block> </fo:block>
+											<fo:block>Button :          <xf:form-control value="Button1" type="button" name="button3CA6E40E4" fo:color="red" fo:background-color="rgb(254,162,42)"/></fo:block>
+											<fo:block text-align="left">RadioButton: <xf:form-control type="radiobutton" name="radiobutton6020" fo:color="red" fo:background-color="rgb(254,162,42)"/> </fo:block>
+											<fo:block>CheckBox:     <xf:form-control type="checkbox" name="checkboxF90E427D4" fo:color="red" fo:background-color="rgb(254,162,42)"/> </fo:block>
+											<fo:block>EditBox:        <xf:form-control type="text" name="text363AE433" fo:color="red" fo:background-color="rgb(254,162,42)"/></fo:block>
+										</xf:form>
+									</fo:block>
+									<fo:block> </fo:block>
+								</fo:table-cell>
+							</fo:table-row>
+							<fo:table-row display-align="center" border-bottom-style="solid" border-bottom-width="3px" border-bottom-color="rgb(255,255,255)">
+								<fo:table-cell id="198F80B" border-right-style="solid" border-right-width="3px" border-right-color="rgb(255,255,255)" padding-top="15pt" padding-left="15pt" padding-bottom="15pt" background-color="rgb(238,206,193)">
+									<fo:block>
+										<xf:form>
+											<fo:block>This is a  group of RadioButtons:</fo:block>
+											<fo:block> </fo:block>
+											<fo:block>RadioButton1: <xf:form-control value="Rb1" xf:type="radiobutton" xf:name="radiobutton70C0E9EF"/></fo:block>
+											<fo:block>RadioButton2: <xf:form-control value="Rb2" xf:type="radiobutton" xf:name="radiobutton70C0E9EF"/></fo:block>
+											<fo:block>RadioButton3: <xf:form-control value="Rb3" xf:type="radiobutton" xf:name="radiobutton70C0E9EF"/> </fo:block>
+											<fo:block>RadioButton4: <xf:form-control value="rb4" xf:type="radiobutton" xf:name="radiobutton70C0E9EF"/> </fo:block>
+										</xf:form>
+									</fo:block>
+									<fo:block> </fo:block>
+								</fo:table-cell>
+								<fo:table-cell id="198F80B" border-right-style="solid" border-right-width="3px" border-right-color="rgb(255,255,255)" padding-top="15pt" padding-left="15pt" padding-bottom="15pt" background-color="rgb(238,206,193)">
+									<fo:block>
+										<xf:form>
+											<fo:block>These controls have different events attached: </fo:block> <fo:block>Button :          <xf:form-control value="Button1" xf:type="button" xf:name="button3CA6E40E5">
+												<xf:form-action action-type="JavaScript" event="OnMouseUp" annotation-reference="3488F0E8"/>
+											</xf:form-control></fo:block><fo:block>RadioButton: <xf:form-control value="rb" xf:type="radiobutton" xf:name="radiobutton6020E401">
+												<xf:form-action action-type="JavaScript" event="OnFocus" annotation-reference="4B38F426"/>
+											</xf:form-control> </fo:block><fo:block>CheckBox:     <xf:form-control value="false" type="checkbox" name="checkboxF10E427D">
+												<xf:form-action action-type="JavaScript" event="OnMouseEnter" annotation-reference="6908F47E"/>
+											</xf:form-control> </fo:block><fo:block>EditBox:        <xf:form-control multiline="false" xf:type="text" xf:name="text363AE4335">
+												<xf:form-action action-type="JavaScript" event="OnMouseEnter" annotation-reference="5C29F4EF"/>
+											</xf:form-control> </fo:block>
+										</xf:form>
+									</fo:block>
+									<fo:block> </fo:block>
+								</fo:table-cell>
+							</fo:table-row>
+							<fo:table-row border-bottom-width="3px" border-bottom-style="solid" border-bottom-color="rgb(255,255,255)">
+								<fo:table-cell number-columns-spanned="2">
+									<fo:block>
+										<fo:table border-bottom-right-radius="20pt 20pt" border-bottom-left-radius="20pt 20pt" width="100%" background-color="rgb(193,39,45)">
+											<fo:table-column column-width="proportional-column-width(1)"/>
+											<fo:table-body>
+												<fo:table-row>
+													<fo:table-cell color="rgb(255,255,255)" text-align="center" font-size="25pt" font-family="Helvetica 65 Medium">
+														<fo:block padding-top="10pt" padding-bottom="10pt">  </fo:block>
+													</fo:table-cell>
+												</fo:table-row>
+											</fo:table-body>
+										</fo:table>
+									</fo:block>
+								</fo:table-cell>
+							</fo:table-row>
+						</fo:table-body>
+					</fo:table>
+				</fo:block> </fo:block>
+		</fo:flow>
+	</fo:page-sequence>
+</fo:root>

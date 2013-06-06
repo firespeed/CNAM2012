@@ -1,0 +1,12 @@
+INDEX VERSION 1.122+D:\ECLIPSE_WORKSPACE_INDIGO\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1506063988.index
+3553294548.index
+201532396.index
+1249692054.index
+983801200.index
+1874913683.index
+3258139354.index
+1084120786.index
+1570766614.index
+2467522705.index
+829330577.index

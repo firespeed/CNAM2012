@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="recette_02.css"?>
+<recette source="Marjorie Anderson">
+	<plat>Pain de froment</plat>
+	<ingredients>
+		<ingredient>
+			<quantite> 1 tasse</quantite>
+			<produit>farine</produit>
+		</ingredient>
+		<ingredient>
+			<quantite>4 cuillères à soupe</quantite>
+			<produit>levure</produit>
+		</ingredient>
+		<ingredient>
+			<quantite>1 1/2 cuillère à café</quantite>
+			<produit>sel</produit>
+		</ingredient>
+		<ingredient>
+			<quantite>1 tasse</quantite>
+			<produit>farine de froment</produit>
+		</ingredient>
+		<ingredient>
+			<quantite>1 1/2 tasse</quantite>
+			<produit>lait entier</produit>
+		</ingredient>
+		<ingredient>
+			<quantite>4 cuillères à soupe</quantite>
+			<produit>beurre fondu</produit>
+		</ingredient>
+	</ingredients>
+
+	<realisation>
+		<etape>
+			Mélangez la farine, la levure, le sucre &amp; le sel.
+		</etape>
+		<etape>
+			Ajoutez une tasse de farine de froment.
+		</etape>
+		<etape>
+			Ajoutez un oeuf battu et 1 1/2 tasse de lait entier pour faire 
+			une pâte. Bien mélanger.
+		</etape>
+		<etape>
+			Ajoutez le beurre fondu et battre jusqu'à obtention d'un
+			mélange léger et homogène.
+		</etape>
+		<etape>
+			Versez dans un moule peu profond ou des moules à muffins 
+			beurrés.
+		</etape>	
+		<etape>
+			Mettre dans un four chaud à <temperature>220° C</temperature> pendant <temps>25 minutes</temps>.
+		</etape>
+		<etape optional="yes">
+			Coupez en parts si vous avez utilisé un grand moule.
+		</etape>
+	</realisation>
+
+	<histoire>
+		Après le décès de ma belle-mère <personne>Marjorie 
+		Anderson</personne>, Beth et moi avons trouvé cette recette dans les
+		pages des "recettes additionnelles" d'un livre de cuisine régionale
+		dans son placard. Il était publié par The Episcopal Churchwomen, 
+		Church of Ascension, <ville>Mt. Sterling</ville>, 
+		<etat>Kentucky</etat>.
+	</histoire>
+	
+</recette>

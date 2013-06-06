@@ -1,0 +1,30 @@
+
+public class Q6 {
+
+	public static void main (String[] args)
+	{
+		String s = "Engage le jeu que je le gagne";
+		char[] tab = s.toCharArray();
+		
+		int x = 0;
+	    int y = s.length()-1;
+	   
+	    while (y>x && tab[x]==tab[y]){
+	        x++;
+	        if (tab[x]==''){
+	         x++;
+	        }
+	       y--;
+	        if (tab[y]==''){
+	         y--;
+	        }
+	    }
+	    if (y<=x)
+	        System.out.println("votre chaine est palindrome");
+	    else
+	        System.out.println("votre chaine n'est pas palindrome");
+
+		
+	}
+
+}

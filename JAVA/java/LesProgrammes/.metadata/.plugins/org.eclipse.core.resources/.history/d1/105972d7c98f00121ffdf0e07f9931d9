@@ -1,0 +1,27 @@
+
+public class Q6 {
+
+	public static void main (String[] args)
+	{
+		String original = "engage le jeu que je le gagne";		
+		String reverse="";
+	 
+		original = original.trim();
+		
+		int length = original.length();
+	 
+	    for ( int i = length - 1 ; i >= 0 ; i-- )
+	        reverse = reverse + original.charAt(i);
+
+	    reverse = reverse.trim();
+	 
+System.out.println("Original : "+original+" - reverse = "+reverse);	    
+	    
+	    
+	    if (original.equals(reverse))
+	         System.out.println("Entered string is a palindrome.");
+	      else
+	         System.out.println("Entered string is not a palindrome.");
+	}
+
+}

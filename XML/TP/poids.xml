@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<poids 	xsi:noNamespaceSchemaLocation="poids.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<personne nom="Albert Durand" pese="80 kg" />
+	<personne nom="Georges Dupond" pese="90 kg" />
+</poids>

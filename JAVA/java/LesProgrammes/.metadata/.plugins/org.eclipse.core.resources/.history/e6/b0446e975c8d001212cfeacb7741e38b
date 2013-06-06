@@ -1,0 +1,74 @@
+import java.awt.*;
+import java.sql.*;
+
+import javax.swing.*;
+
+import java.awt.event.*;
+import java.util.*;
+
+public class TestListe extends JFrame implements ItemListener  {
+		
+	    JButton okb = new JButton("OK");
+	    JComboBox lieu = new JComboBox();
+	    
+		JPanel pane;
+	
+		public TestListe() {		
+			super("Test");
+	        setSize(600, 500);
+	        this.setResizable(false);
+		        
+	        JPanel panneau = new JPanel();
+		
+		try
+	    	{
+	    		Class.forName(driver);
+				Connection conn = DriverManager.getConnection(cnx,user,psw);
+				Statement st = conn.createStatement();
+
+				// Les specialités
+				requete = "SELECT * FROM specialite ORDER BY NOM_SPECIALITE";			
+		    	ResultSet res = st.executeQuery(requete);
+	    		specialite.addItem("");	    	
+		    	while(res.next())
+		    	{
+		    		specialite.addItem(res.getString("NOM_SPECIALITE"));
+		    	}
+
+				// Les lieux
+				requete = "SELECT * FROM lieu ORDER BY NOM_LIEU";			
+		    	res = st.executeQuery(requete);
+		    	lieu.addItem("");	    
+		    	while(res.next())
+		    	{
+		    		lieu.addItem(res.getString("NOM_LIEU"));
+		    	}
+
+				// Les batailles
+				requete = "SELECT * FROM bataille ORDER BY NOM_BATAILLE";			
+		    	res = st.executeQuery(requete);
+		    	bataille.addItem("");
+		    	while(res.next())
+		    	{
+		    		bataille.addItem(res.getString("NOM_BATAILLE"));
+		    	}
+		    	
+		    	
+	    	}catch (Exception e)		    
+			{
+				System.out.println("ERREUR " + e.toString());
+			}
+	        specialite.addItemListener(this);
+	        lieu.addItemListener(this);
+	        bataille.addItemListener(this);
+	        
+	        resultat.setText("");
+	        
+	        // Content Pane
+	        setContentPane(panneau);
+	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        setVisible(true);
+	    }
+
+
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- definition of simple elements -->
+	<xs:element name="client" type="xs:string"/>
+	<xs:element name="nom" type="xs:string"/>
+	<xs:element name="addresse" type="xs:string"/>
+	<xs:element name="ville" type="xs:string"/>
+	<xs:element name="pays" type="xs:string"/>
+	<xs:element name="titre" type="xs:string"/>
+	<xs:element name="note" type="xs:string"/>
+	<xs:element name="quantite" type="xs:positiveInteger"/>
+	<xs:element name="prix" type="xs:decimal"/>
+	<!-- definition of attributes -->
+	<xs:attribute name="commande" type="type_cde"/>
+	<xs:element name="email">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="(.)+@(.)+.fr"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:simpleType name="type_cde">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="CDE-[0-9]{6}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- definition of complex elements -->
+	<xs:element name="livraison">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="nom"/>
+				<xs:element ref="addresse"/>
+				<xs:element ref="ville"/>
+				<xs:element ref="pays"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="article">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="titre"/>
+				<xs:element ref="note" minOccurs="0"/>
+				<xs:element ref="quantite"/>
+				<xs:element ref="prix"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="achat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="client"/>
+				<xs:element ref="email"/>
+				<xs:element ref="livraison"/>
+				<xs:element ref="article" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute ref="commande" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

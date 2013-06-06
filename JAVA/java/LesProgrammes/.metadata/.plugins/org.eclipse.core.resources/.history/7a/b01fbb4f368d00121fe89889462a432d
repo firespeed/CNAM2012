@@ -1,0 +1,31 @@
+
+
+
+public class Villageois {
+
+	private String nom;
+	private String adresse;
+	private String lieu;
+	private String specialite;
+	
+
+	
+	Villageois(String nom, String adresse, String lieu, String specialite)
+	{
+		this.nom = nom;
+		this.adresse = adresse;
+		this.lieu = lieu;
+		this.specialite = specialite;		
+	}
+
+	public String getNom() 			{return this.nom;}
+	public String getAdresse() 		{return this.adresse;}
+	public String getLieu() 		{return this.lieu;}
+	public String getSpecialite() 	{return this.specialite;}
+	
+	public void setNom(String nom) 					{this.nom = nom;}
+	public void setAdresse(String adresse) 			{this.adresse = adresse;}
+	public void setLieu(String lieu) 				{this.lieu = lieu;}
+	public void setSpecialite(String specialite) 	{this.specialite = specialite;}
+	
+}

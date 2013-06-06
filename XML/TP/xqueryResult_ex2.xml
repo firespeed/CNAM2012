@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<numerodecommande>1</numerodecommande>
+<client origine="entreprise">Bernard</client>
+<numerodecommande>2</numerodecommande>
+<client origine="particulier">Jean-Marie</client>
+<numerodecommande>3</numerodecommande>
+<client origine="entreprise">Bernard</client>
+<numerodecommande>4</numerodecommande>
+<client origine="entreprise">Bernard</client>
+<numerodecommande>5</numerodecommande>
+<client origine="particulier">Bea</client>

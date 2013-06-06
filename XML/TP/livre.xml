@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<bibliotheque>
+	<livre>
+		<isbn>1234</isbn>
+		<titre>ACCESS 20007</titre>
+	</livre>
+	<livre>
+		<isbn>1235</isbn>
+		<titre>Débuter avec Visual studio 2005</titre>
+	</livre>
+	<livre>
+		<isbn>12</isbn>
+		<titre>VB.net par la pratique</titre>
+	</livre>
+	<livre>
+		<isbn>4567</isbn>
+		<titre>Vista configuration</titre>
+	</livre>
+	<livre>
+		<isbn>89</isbn>
+		<titre>C# par la pratique</titre>
+	</livre>
+	<livre>
+		<isbn>6545</isbn>
+		<titre>Mémento SQL</titre>
+	</livre>
+	<livre>
+		<isbn>2345</isbn>
+		<titre>XML introduction</titre>
+	</livre>
+	<livre>
+		<isbn>567</isbn>
+		<titre>XHTML et CSS</titre>
+	</livre>
+	<livre>
+		<isbn>990</isbn>
+		<titre>Informatique de gestion</titre>
+	</livre>
+</bibliotheque>

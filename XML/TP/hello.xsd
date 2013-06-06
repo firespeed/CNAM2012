@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Définition de la chaine de 32 caractères -->
+	<xs:simpleType name="Texte32">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="32" />	
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Element racine -->
+	<xs:element name="hello" type="Texte32" />	
+</xs:schema>

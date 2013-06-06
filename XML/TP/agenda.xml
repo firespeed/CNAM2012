@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <!DOCTYPE agenda [
+<!--    <!ELEMENT id_client (#PCDATA)> -->
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT prenom (#PCDATA)>
+    <!ELEMENT num_rue (#PCDATA)>
+    <!ELEMENT rue (#PCDATA)>
+    <!ELEMENT ville (#PCDATA)>
+    <!ELEMENT telephone (#PCDATA)>
+    <!ELEMENT fax (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT contact (telephone*, fax*, email*)>
+   <!ELEMENT adresse (num_rue, rue, ville)>
+   <!ELEMENT nom_complet (nom, prenom)>
+   <!ELEMENT client (nom_complet, adresse, contact)>
+   <!ELEMENT agenda (client*)> 
+]>
+<agenda>
+<client>
+	<nom_complet>
+		<nom>Fino</nom>
+		<prenom>JM</prenom>
+	</nom_complet>
+	<adresse>
+		<num_rue>24</num_rue>
+		<rue>Grand chemin</rue>
+		<ville>Montbéliard</ville>
+	</adresse>
+	<contact>
+		<telephone>03-81-90-99-00</telephone>
+		<fax>03-81-90-99-01</fax>
+		<email>jmfino@odyssea.fr</email>
+		<email>jmfino@wanadoo.fr</email>
+	</contact>	
+</client>
+<client>
+	<nom_complet>
+		<nom>Dupond</nom>
+		<prenom>Georges</prenom>
+	</nom_complet>
+	<adresse>
+		<num_rue>32</num_rue>
+		<rue>Avenue St Martin</rue>
+		<ville>Paris</ville>
+	</adresse>
+	<contact>
+		<telephone>03-04-90-99-00</telephone>
+		<fax>03-81-90-99-01</fax>
+		<email>gdupond@wanadoo.fr</email>
+	</contact>	
+</client>
+</agenda>

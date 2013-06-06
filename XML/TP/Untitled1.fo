@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" >
+
+<!-- Déclaration de la mise en page -->
+<fo:layout-master-set>
+	<fo:simple-page-master master-name="ma-page" margin="2cm">
+		<fo:region-body margin="1.5cm 0 2cm 0" column-count="2" />
+		<fo:region-before extent="1cm" />
+		<fo:region-after precedence="true" extent="1cm" />
+	</fo:simple-page-master>
+</fo:layout-master-set>
+
+<!-- Corps du document -->
+<fo:page-sequence
+    master-reference="ma-page"
+    font-family="Times"
+    font-size="11.5pt"
+    line-height="1.5em"
+    text-align="justify">
+    <fo:static-content flow-name="xsl-region-before">
+        <!-- table-layout="auto" isn't yet supported by FOP -->
+        <fo:table table-layout="fixed" border-bottom="1px solid #ccc"
+            font-size=".9em" color="#666">
+            <fo:table-column column-width="5cm" />
+            <fo:table-column column-width="6.31cm" />
+            <fo:table-column column-width="5cm" />
+            <fo:table-body>
+                <fo:table-row>
+                    <fo:table-cell>
+                        <fo:block>Tuesday the
+                            25<fo:inline
+                                font-size="60%" vertical-align="super">th</fo:inline>
+                        of May 2006</fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell>
+                        <fo:block text-align="center"
+                            font-weight="bold">Lorem ipsum</fo:block>
+                    </fo:table-cell>
+                    <fo:table-cell>
+                        <fo:block text-align="right">Yoan Blanc</fo:block>
+                    </fo:table-cell>
+                </fo:table-row>
+            </fo:table-body>
+        </fo:table>
+	</fo:static-content>
+	<fo:static-content flow-name="xsl-region-after">
+		<fo:block border-top="1px solid #ccc" color="#666" font-size=".9em"
+            text-align="center">page <fo:page-number /></fo:block>
+	</fo:static-content>
+    <fo:flow flow-name="xsl-region-body">
+        <!-- un titre -->
+        <fo:block
+            font-size="33pt"
+            font-weight="bold">
+            Lorem ipsum
+        </fo:block>
+        <fo:block
+            font-style="italic"
+            font-size="14pt"
+            border-bottom="1px solid #999"
+            space-after="2em">
+            dolor sit amet, consectetuer adipiscing elit.
+        </fo:block>
+        <fo:block text-indent="2em" space-after="1em">
+           Vivamus mollis pede nec ante lacinia viverra. Suspendisse scelerisque nisi vel tortor. Aliquam ac nisi. Proin massa massa, congue id, suscipit ac, tempus vel, elit. Sed posuere molestie lectus. Aenean non lorem. Praesent quam odio, gravida eget, volutpat id, gravida id, magna. Morbi vestibulum. Vivamus ultricies. Integer metus. Donec mattis, dolor id laoreet sodales, felis enim dignissim lacus, vel commodo turpis leo ut erat. Nulla malesuada volutpat magna. Sed faucibus eros sit amet sem. Aliquam adipiscing. Nullam mollis convallis mi. Sed non arcu. Etiam at arcu.
+        </fo:block>
+        <fo:block text-indent="2em" space-after="1em">
+            Integer diam. Phasellus nisl sapien, pellentesque bibendum, nonummy quis, posuere et, lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse consectetuer purus non urna. Phasellus id turpis. Nunc rhoncus aliquet mauris. Integer odio quam, auctor feugiat, suscipit sed, luctus in, nunc. Suspendisse pharetra, tortor eget lobortis molestie, dolor risus sollicitudin diam, nec viverra elit elit et magna. Praesent ac metus id dui volutpat tincidunt. Pellentesque ligula odio, iaculis vel, tempor rutrum, hendrerit eu, urna.
+        </fo:block>
+        <fo:block text-indent="2em" space-after="1em">
+            Sed convallis. Proin nec libero id elit suscipit mollis. Aliquam at pede sit amet erat tempus suscipit. Suspendisse sit amet justo. Mauris ultricies lacus ac pede. Duis et enim. Quisque et pede ut orci porta accumsan. Curabitur sed lectus sed lectus tristique viverra. Nulla dictum. Suspendisse adipiscing. Maecenas vitae libero ac turpis suscipit dignissim. Mauris malesuada dolor non orci. Phasellus ligula felis, rhoncus quis, ornare a, blandit vitae, nisi. Morbi est urna, posuere non, bibendum a, dapibus at, purus. Aliquam dictum est ac metus. Sed a orci vitae enim suscipit varius. Nulla facilisi. Mauris dignissim, mi quis suscipit congue, ante turpis consectetuer ante, et aliquam massa diam vitae mauris.
+        </fo:block>
+        <fo:block text-indent="2em" space-after="1em">
+            Nunc eget dolor. Curabitur convallis pulvinar metus. Praesent a ipsum in nisi gravida dignissim. Etiam dictum. Nulla hendrerit vehicula risus. Vivamus lobortis. Donec urna nisi, placerat viverra, consequat et, nonummy id, felis. Praesent malesuada molestie dui. Mauris a pede. Fusce tincidunt condimentum lectus. Mauris odio. Sed nisi diam, tristique a, pulvinar sit amet, egestas in, sapien. Nunc suscipit ultricies lectus.
+        </fo:block>
+        <fo:block text-indent="2em" space-after="1em">
+            Suspendisse rhoncus risus a purus. Nullam vel libero. Cras vulputate. Proin vel quam a purus iaculis mollis. Cras nonummy dolor nec pede. Curabitur sed lorem. Praesent turpis est, pharetra a, blandit ut, sollicitudin vel, pede. Nam vel est. Phasellus dignissim. Donec nunc. In ut lacus. Etiam metus.
+        </fo:block>
+        <fo:block text-indent="2em" space-after="1em">
+            Sed volutpat. Vivamus purus lectus, ultricies id, venenatis eget, sagittis ac, neque. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec pellentesque pharetra tellus. Pellentesque aliquam, sapien nec dapibus molestie, urna enim elementum orci, et nonummy sapien eros at dui. Nulla volutpat magna et ipsum. Aliquam sapien justo, sollicitudin eu, dictum ac, tempor id, justo. Curabitur venenatis sodales quam. Nullam elementum libero. Donec ac risus non ipsum consectetuer egestas. Ut pharetra suscipit felis. Ut feugiat. Proin ullamcorper. Suspendisse hendrerit varius orci. Donec rhoncus malesuada turpis. Maecenas dapibus. Quisque nulla. Donec convallis nisl quis felis. Proin laoreet.
+        </fo:block>
+        <fo:block text-indent="2em" space-after="1em">
+            Vestibulum libero dolor, tempor condimentum, fringilla id, vestibulum a, nibh. Morbi quis diam. Morbi varius enim. Pellentesque dictum. Etiam justo nibh, gravida vel, adipiscing eget, scelerisque vitae, est. In hac habitasse platea dictumst. Nam fermentum pellentesque mauris. Maecenas eget nunc eu massa commodo cursus. Aenean facilisis. Nunc facilisis, sapien eget feugiat bibendum, tellus purus interdum libero, sit amet iaculis enim sem sed erat. Nam sed sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sit amet orci. Ut molestie. Suspendisse magna elit, auctor interdum, adipiscing sit amet, vestibulum eu, orci. Morbi vitae nulla. Donec ligula. Vivamus ultrices.
+        </fo:block>
+        <fo:block text-indent="2em" space-after="1em">
+            Donec porttitor. Maecenas nec dolor eu augue faucibus ultricies. Nam et nisi. Aliquam sed neque. Nullam aliquet cursus quam. Nullam nec risus eget lorem pellentesque congue. Praesent eu eros eget risus dignissim congue. Nulla facilisi. Phasellus massa magna, fringilla id, porttitor porttitor, gravida quis, mi. Donec feugiat justo. Fusce a diam. Fusce massa augue, ornare ut, consequat non, malesuada ut, leo. Integer lectus est, pretium sagittis, interdum non, pellentesque sit amet, lorem. Nam justo tellus, cursus at, fermentum nec, rutrum quis, magna. Praesent ac nulla a erat sodales auctor. 
+        </fo:block>
+        <fo:block
+            font-style="italic"
+            text-align="right">
+            — Vestibulum eget lectus.
+        </fo:block>
+    </fo:flow>
+</fo:page-sequence>
+
+</fo:root>

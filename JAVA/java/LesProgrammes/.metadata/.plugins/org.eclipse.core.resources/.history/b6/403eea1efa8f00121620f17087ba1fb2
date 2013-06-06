@@ -1,0 +1,21 @@
+
+public class MainPersonne {
+
+	
+	public static void main(String args[]) {
+		
+		Personne[] table = new Personne[5];
+		
+		try{
+			table[0] = new Personne("Durand", "Georges", 43);
+			table[1] = new Personne("Dupont", "Albert", 43);
+			table[2] = new Personne("Dubois", "Eric", 22);
+		
+		
+		}catch(ChaineNulle cn)
+		{
+			
+		}
+		
+	}	
+}

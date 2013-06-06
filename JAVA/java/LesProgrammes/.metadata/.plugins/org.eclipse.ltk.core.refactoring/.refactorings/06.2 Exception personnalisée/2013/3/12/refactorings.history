@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;06.3 Exceptions personnalisées multiples/src&apos;&#x0D;&#x0A;- Original project: &apos;06.2 Exception personnalisée&apos;&#x0D;&#x0A;- Destination element: &apos;06.3 Exceptions personnalisées multiples/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Except1.java&#x0D;&#x0A;     Point.java&#x0D;&#x0A;     ErrConst.java" description="Copy compilation units" destination="=06.3 Exceptions personnalisées multiples/src" element1="/src&lt;{Except1.java" element2="/src&lt;{Point.java" element3="/src&lt;{ErrConst.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1363628248055" units="3" version="1.0"/>
+</session>

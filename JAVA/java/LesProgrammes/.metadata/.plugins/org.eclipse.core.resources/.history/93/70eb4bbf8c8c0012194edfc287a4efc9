@@ -1,0 +1,18 @@
+
+public class LinkedListEleve {
+
+	
+	public static void main (String[] args)
+	{ 
+		String reponse;
+		System.out.println("Voulez-vous saisir un eleve ? (O/N)");
+		reponse = Clavier.lireString();
+		while(reponse == "O")
+		{
+			
+			System.out.println("Voulez-vous saisir un autre eleve ? (O/N)"+Clavier.lireString()) ;
+		}
+	
+	}
+	
+}

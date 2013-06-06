@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE liste SYSTEM "adherent.dtd">
+<liste>
+	<membre>
+		<code>1</code>
+		<nom>Cardoni</nom>
+		<prenom>Jean-Marie</prenom>
+	</membre>
+	<membre>
+		<code>2</code>
+		<nom>Lallement</nom>
+		<prenom>Bernard</prenom>
+	</membre>
+	<membre>
+		<code>3</code>
+		<nom>Kintzler</nom>
+		<prenom>Agnès</prenom>
+	</membre>
+	<membre>
+		<code>4</code>
+		<nom>Georgelin</nom>
+		<prenom>Bèatrice</prenom>
+	</membre>
+</liste>

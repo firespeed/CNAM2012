@@ -1,0 +1,13 @@
+class Point
+{ Point (int x, int y) { this.x = x ; this.y = y ; }
+public int hashCode ()
+{ return x+y ; }
+public boolean equals (Object pp)
+{ Point p = (Point) pp ;
+return ((this.x == p.x) & (this.y == p.y)) ;
+}
+public void affiche ()
+{ System.out.print ("[" + x + " " + y + "] ") ;
+}
+private int x, y ;
+}

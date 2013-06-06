@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="employes.xsd">
+
+	<employe>	
+		<prenom>Albert</prenom>
+		<nom>Dupont</nom>
+	</employe>	
+	
+	<employe_full>	
+		<prenom>Georges</prenom>
+		<nom>Durand</nom>
+		<addresse>37 grande rue</addresse>
+		<ville>Montbéliard</ville>
+		<pays>France</pays>
+	</employe_full>
+
+</employes>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personne SYSTEM "personne.dtd">
+<personne>
+	<nom>
+		<prénom>Alan</prénom>
+		<nom_famille>Turing</nom_famille>
+	</nom>
+	<profession>informaticien</profession>
+	<profession>mathématicien</profession>
+	<profession>cryptographe</profession>
+</personne>
+
+

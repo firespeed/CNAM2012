@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;00 javaWebStart/src&apos;&#x0D;&#x0A;- Original project: &apos;99.20 TP Swing SRC01&apos;&#x0D;&#x0A;- Destination element: &apos;00 javaWebStart/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     tp.src.FrameGaulois.java&#x0D;&#x0A;     tp.src.Villageois.java" description="Copy compilation units" destination="=00 javaWebStart/src" element1="/src&lt;tp.src{FrameGaulois.java" element2="/src&lt;tp.src{Villageois.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1363327503796" units="2" version="1.0"/>
+</session>

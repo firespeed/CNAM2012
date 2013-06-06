@@ -1,0 +1,36 @@
+
+public class Q7 {
+	int a =0;
+	int b=0;
+	
+	Q7(int a, int b){
+		this.a = a;
+		this.b=b;
+	}
+	
+	public int A(int a,int b)
+	{
+		  int p=a*b;
+		  while (a!=b) if (a<b) b-=a; else a-=b;
+		  return p/a;
+	}
+
+	
+	public int B(int a, int b) {
+
+	    if(a<b)
+	      return (B(b,a));
+	    else if(b==0)
+	      return (a);
+	    else
+	      return (B(b,a%b));
+	  }
+	
+	public static void main (String[] args)
+	{
+		Q7 test = new Q7(253, 126);
+		System.out.println("A = "+);
+
+	}
+	
+}

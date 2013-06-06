@@ -1,0 +1,17 @@
+
+public class Poule extends Oeuf {
+	public Poule()
+	{
+	
+	}
+	public Poule(int i)
+	{
+		this(); 
+		x=x*i;
+	}
+	public Poule(String s)
+	{
+		super(33);
+		x- -;
+	}
+}

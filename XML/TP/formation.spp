@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="XML Files" ExtStr="xml;cml;math;rdf;smil;svg;wml">
+		<File FilePath="8-1.xml" HomeFolder="Yes"/>
+		<File FilePath="8-10.xml" HomeFolder="Yes"/>
+		<File FilePath="8_99.xml" HomeFolder="Yes"/>
+		<File FilePath="achat.xml" HomeFolder="Yes"/>
+		<File FilePath="adherent.xml" HomeFolder="Yes"/>
+		<File FilePath="agenda.xml" HomeFolder="Yes"/>
+		<File FilePath="annuaire.xml" HomeFolder="Yes"/>
+		<File FilePath="bataille.xml" HomeFolder="Yes"/>
+		<File FilePath="bibliographie.xml" HomeFolder="Yes"/>
+		<File FilePath="catalog.xml" HomeFolder="Yes"/>
+		<File FilePath="client.xml" HomeFolder="Yes"/>
+		<File FilePath="client_xsd.xml" HomeFolder="Yes"/>
+		<File FilePath="combat.xml" HomeFolder="Yes"/>
+		<File FilePath="commande.xml" HomeFolder="Yes"/>
+		<File FilePath="departement.xml" HomeFolder="Yes"/>
+		<File FilePath="employes.xml" HomeFolder="Yes"/>
+		<File FilePath="emprunt.xml" HomeFolder="Yes"/>
+		<File FilePath="hello.xml" HomeFolder="Yes"/>
+		<File FilePath="joueur.xml" HomeFolder="Yes"/>
+		<File FilePath="lesGaulois.xml" HomeFolder="Yes"/>
+		<File FilePath="lesProjets.xml" HomeFolder="Yes"/>
+		<File FilePath="lesProjets2.xml" HomeFolder="Yes"/>
+		<File FilePath="librairie.xml" HomeFolder="Yes"/>
+		<File FilePath="lieu.xml" HomeFolder="Yes"/>
+		<File FilePath="livre.xml" HomeFolder="Yes"/>
+		<File FilePath="notation.xml" HomeFolder="Yes"/>
+		<File FilePath="people.xml" HomeFolder="Yes"/>
+		<File FilePath="personne.xml" HomeFolder="Yes"/>
+		<File FilePath="Personnes.xml" HomeFolder="Yes"/>
+		<File FilePath="recette.xml" HomeFolder="Yes"/>
+		<File FilePath="recette_01.xsl" HomeFolder="Yes"/>
+		<File FilePath="villageois.xml" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="XSL Files" ExtStr="xsl;xslt">
+		<File FilePath="8-0.xsl" HomeFolder="Yes"/>
+		<File FilePath="8-1.xsl" HomeFolder="Yes"/>
+		<File FilePath="8-10.xsl" HomeFolder="Yes"/>
+		<File FilePath="8-2.xsl" HomeFolder="Yes"/>
+		<File FilePath="8-3.xsl" HomeFolder="Yes"/>
+		<File FilePath="8-4.xsl" HomeFolder="Yes"/>
+		<File FilePath="8-5.xsl" HomeFolder="Yes"/>
+		<File FilePath="8_11.xml" HomeFolder="Yes"/>
+		<File FilePath="8_99.xml"/>
+		<File FilePath="Annonce.xsl" HomeFolder="Yes"/>
+		<File FilePath="annuaire.xsl" HomeFolder="Yes"/>
+		<File FilePath="annuaireT.xsl" HomeFolder="Yes"/>
+		<File FilePath="catalog_02.xsl" HomeFolder="Yes"/>
+		<File FilePath="lesGaulois_01.xsl" HomeFolder="Yes"/>
+		<File FilePath="libraire2.xsd" HomeFolder="Yes"/>
+		<File FilePath="librairie.xsl" HomeFolder="Yes"/>
+		<File FilePath="librairie_01.xsl" HomeFolder="Yes"/>
+		<File FilePath="librairie_02.xsl" HomeFolder="Yes"/>
+		<File FilePath="Personnes.xsl" HomeFolder="Yes"/>
+		<File FilePath="recette_02.css" HomeFolder="Yes"/>
+		<File FilePath="tranform2.xsl" HomeFolder="Yes"/>
+		<File FilePath="transform.xsl" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="XQuery Files" ExtStr="xq;xql;xquery">
+		<File FilePath="ex1.xq" HomeFolder="Yes"/>
+		<File FilePath="ex10.xq" HomeFolder="Yes"/>
+		<File FilePath="ex11.xq" HomeFolder="Yes"/>
+		<File FilePath="ex12.xq" HomeFolder="Yes"/>
+		<File FilePath="ex13.xq" HomeFolder="Yes"/>
+		<File FilePath="ex14.xq" HomeFolder="Yes"/>
+		<File FilePath="ex15.xq" HomeFolder="Yes"/>
+		<File FilePath="ex16.xq" HomeFolder="Yes"/>
+		<File FilePath="ex1bis.xq" HomeFolder="Yes"/>
+		<File FilePath="ex2.xq" HomeFolder="Yes"/>
+		<File FilePath="ex20.xq" HomeFolder="Yes"/>
+		<File FilePath="ex22.xq" HomeFolder="Yes"/>
+		<File FilePath="ex3.xq" HomeFolder="Yes"/>
+		<File FilePath="ex4.xq" HomeFolder="Yes"/>
+		<File FilePath="ex5.xq" HomeFolder="Yes"/>
+		<File FilePath="ex6.xq" HomeFolder="Yes"/>
+		<File FilePath="ex7.xq" HomeFolder="Yes"/>
+		<File FilePath="ex8.xq" HomeFolder="Yes"/>
+		<File FilePath="ex9.xq" HomeFolder="Yes"/>
+		<File FilePath="jointure1.xq" HomeFolder="Yes"/>
+		<File FilePath="lesGaulois_01.xquery" HomeFolder="Yes"/>
+		<File FilePath="lesGaulois_05.xquery" HomeFolder="Yes"/>
+		<File FilePath="lesGaulois_J02.xq" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd">
+		<File FilePath="achat.xsd" HomeFolder="Yes"/>
+		<File FilePath="adherent.dtd" HomeFolder="Yes"/>
+		<File FilePath="annuaire.xsd" HomeFolder="Yes"/>
+		<File FilePath="bibliographie.dtd" HomeFolder="Yes"/>
+		<File FilePath="client.xsd" HomeFolder="Yes"/>
+		<File FilePath="commande.dtd" HomeFolder="Yes"/>
+		<File FilePath="departement.xsd" HomeFolder="Yes"/>
+		<File FilePath="employes.xsd" HomeFolder="Yes"/>
+		<File FilePath="hello.xsd" HomeFolder="Yes"/>
+		<File FilePath="joueur.xsd" HomeFolder="Yes"/>
+		<File FilePath="lesProjets.dtd" HomeFolder="Yes"/>
+		<File FilePath="lesProjets.xsd" HomeFolder="Yes"/>
+		<File FilePath="notation.xsd" HomeFolder="Yes"/>
+		<File FilePath="personne.dtd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="Xsl-FO">
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\articles.xml" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\articles.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\contenuBlock.fo" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\contenuFlow.fo" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\contenuList.fo" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\contenuStatic.fo" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\edt.xml" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\edt.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\gauloisXslFo_01.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\gauloisXslFo_02.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\gauloisXslFo_03.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\gauloisXslFo_04.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\gauloisXslFo_05.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\gauloisXslFo_06.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\helloWorld.fo" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\lesGaulois.xml" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\lesGaulois02.xml" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\lesGaulois03.xml" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\lesgauloisRelatif_01.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\listeGaulois.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\personnes.xml" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\personnesLiens.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\personnesListe.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\personnesLivret.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\personnesSignets.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\personnesTab.xsl" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\recette.xml" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\regions.fo" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\test.fo" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\titre.xml" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\titre_01.xsl" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="SVG">
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\exemple_01.svg" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="Relax NG" ExtStr=".rng">
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\Relax NG\repertoire.rng" HomeFolder="Yes"/>
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\Relax NG\repertoire.xml" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="WSDL">
+		<File FilePath="D:\DIVAE FORMATIONS\XML ENS\TP FO\lesGaulois.wsdl" HomeFolder="Yes"/>
+	</Folder>
+</Project>

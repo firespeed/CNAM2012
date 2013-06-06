@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<librairie 	xsi:noNamespaceSchemaLocation="librairie.xsd" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<livre isbn="2212110472" categorie="XML">
+		<titre>
+			Services Web avec XML, SOAP, WSDL, UDDI, ebXML ...
+		</titre>
+		<auteur>Jean-Marie Chauvet</auteur>
+		<editeur>Eyrolles</editeur>
+	</livre>
+
+	<livre isbn="2100065203" categorie="XML">
+		<titre>XML Manuel de référence</titre>
+		<auteur>R. Wyke</auteur>
+		<auteur>S. Rehman</auteur>
+		<auteur>B. Leupen</auteur>
+		<editeur>Microsoft Press</editeur>
+	</livre>
+
+	<livre isbn="1928994474" categorie="XML">
+		<titre>XML.NET Developer's Guide</titre>
+		<auteur>Collectif</auteur>
+		<editeur>Syngress</editeur>
+	</livre>
+
+</librairie>
+

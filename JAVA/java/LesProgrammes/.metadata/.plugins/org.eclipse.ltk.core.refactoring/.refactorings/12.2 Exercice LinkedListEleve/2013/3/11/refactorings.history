@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;12.4 ArrayListEleve/src&apos;&#x0D;&#x0A;- Original project: &apos;12.2 LinkedListEleve&apos;&#x0D;&#x0A;- Destination element: &apos;12.4 ArrayListEleve/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Eleve.java&#x0D;&#x0A;     Clavier.java" description="Copy compilation units" destination="=12.4 ArrayListEleve/src" element1="/src&lt;{Eleve.java" element2="/src&lt;{Clavier.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1363504318809" units="2" version="1.0"/>
+</session>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="note_chiffree">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="type_note">
+		<xs:union memberTypes="xs:string note_chiffree"/>
+	</xs:simpleType>
+
+	<xs:complexType name="type_notation">
+		<xs:sequence>
+			<xs:element name="note_devoir" type="type_note" 
+			maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="notation" type="type_notation"/>
+
+</xs:schema>

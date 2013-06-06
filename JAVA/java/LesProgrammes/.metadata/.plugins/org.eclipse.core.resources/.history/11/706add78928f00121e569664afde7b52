@@ -1,0 +1,26 @@
+class Point {
+	Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	public int hashCode() {
+	// Ici la table de hachage determine 
+	// que le code de hachage de l'élément est la somme
+	// de ses coordonnées
+		return x + y;
+	}
+
+	public boolean equals(Object pp) {
+	// Méthode déterminant l'égalité de 2 éléments
+	// ils sont égaux si leurs coordonnées sont égales
+		Point p = (Point) pp;
+		return ((this.x == p.x) & (this.y == p.y));
+	}
+
+	public void affiche() {
+		System.out.print("[" + x + " " + y + "] ");
+	}
+
+	private int x, y;
+}

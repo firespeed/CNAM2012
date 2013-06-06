@@ -1,0 +1,197 @@
+
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.util.*;
+
+public class FrameGaulois extends JFrame implements ActionListener {
+	private static final long serialVersionUID = 1L;
+	JButton okb = new JButton("OK");
+    JTextField nom = new JTextField("",20 );
+    JTextField adresse = new JTextField("",20);
+    JTextField lieu = new JTextField("",20);
+    JTextField specialite = new JTextField("",20);
+    
+    
+    JTextArea resultat = new JTextArea(20,50);
+	JScrollPane scroll = new JScrollPane(resultat);
+	Vector<Villageois> v = new Vector<Villageois>();
+
+	 void buildConstraints(GridBagConstraints gbc, int gx, int gy,
+		        int gw, int gh, int wx, int wy) {
+
+		        gbc.gridx = gx;
+		        gbc.gridy = gy;
+		        gbc.gridwidth = gw;
+		        gbc.gridheight = gh;
+		        gbc.weightx = wx;
+		        gbc.weighty = wy;
+	}
+	 
+    public FrameGaulois() {
+        super("Affichage Gaulois");
+        setSize(600, 300);
+        this.setResizable(false);
+        
+        GridBagLayout gridbag = new GridBagLayout();
+        GridBagConstraints constraints = new GridBagConstraints();
+        JPanel panneau = new JPanel();
+        panneau.setLayout(gridbag);
+
+        okb.addActionListener(this);
+
+// 1° ligne     
+        // libelle nom
+        buildConstraints(constraints, 0, 0, 1, 1, 10, 10);
+        constraints.fill = GridBagConstraints.NONE;
+        constraints.anchor = GridBagConstraints.WEST;
+        JLabel label1 = new JLabel(" Nom : ", JLabel.LEFT);
+        gridbag.setConstraints(label1, constraints);
+        panneau.add(label1);  
+
+        // TextField nom
+        buildConstraints(constraints, 1, 0, 1, 1, 60, 10);
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.anchor = GridBagConstraints.WEST;
+    	gridbag.setConstraints(nom, constraints);
+        panneau.add(nom);
+        
+        // label vide
+        buildConstraints(constraints, 2, 0, 1, 1, 30, 10);
+        constraints.fill = GridBagConstraints.NONE;
+        constraints.anchor = GridBagConstraints.WEST;
+        JLabel vide1 = new JLabel("", JLabel.LEFT);
+        gridbag.setConstraints(vide1, constraints);
+        panneau.add(vide1);  
+    
+// 2° ligne     
+        // libelle adresse
+        buildConstraints(constraints, 0, 1, 1, 1, 10, 10);
+        constraints.fill = GridBagConstraints.NONE;
+        constraints.anchor = GridBagConstraints.WEST;
+        JLabel label2 = new JLabel(" Adresse : ", JLabel.LEFT);
+        gridbag.setConstraints(label2, constraints);
+        panneau.add(label2);  
+
+        // TextField adresse
+        buildConstraints(constraints, 1, 1, 1, 1, 60, 10);
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.anchor = GridBagConstraints.WEST;
+    	gridbag.setConstraints(adresse, constraints);
+        panneau.add(adresse);
+        
+        // label vide
+        buildConstraints(constraints, 2, 1, 1, 1, 30, 10);
+        constraints.fill = GridBagConstraints.NONE;
+        constraints.anchor = GridBagConstraints.WEST;
+        JLabel vide2 = new JLabel("", JLabel.LEFT);
+        gridbag.setConstraints(vide2, constraints);
+        panneau.add(vide2); 
+        
+// 3° ligne     
+        // libelle lieu
+        buildConstraints(constraints, 0, 2, 1, 1, 10, 10);
+        constraints.fill = GridBagConstraints.NONE;
+        constraints.anchor = GridBagConstraints.WEST;
+        JLabel label3 = new JLabel(" Lieu : ", JLabel.LEFT);
+        gridbag.setConstraints(label3, constraints);
+        panneau.add(label3);  
+
+        // TextField lieu
+        buildConstraints(constraints, 1, 2, 1, 1, 60, 10);
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.anchor = GridBagConstraints.WEST;
+    	gridbag.setConstraints(lieu, constraints);
+        panneau.add(lieu);
+        
+        // label vide
+        buildConstraints(constraints, 2, 2, 1, 1, 30, 10);
+        constraints.fill = GridBagConstraints.NONE;
+        constraints.anchor = GridBagConstraints.WEST;
+        JLabel vide3 = new JLabel("", JLabel.LEFT);
+        gridbag.setConstraints(vide3, constraints);
+        panneau.add(vide3); 
+ 
+// 4° ligne     
+        // libelle specialite
+        buildConstraints(constraints, 0, 3, 1, 1, 10, 10);
+        constraints.fill = GridBagConstraints.NONE;
+        constraints.anchor = GridBagConstraints.WEST;
+        JLabel label4 = new JLabel(" Spécialité : ", JLabel.LEFT);
+        gridbag.setConstraints(label4, constraints);
+        panneau.add(label4);  
+
+        // TextField specialite
+        buildConstraints(constraints, 1, 3, 1, 1, 60, 10);
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.anchor = GridBagConstraints.WEST;
+    	gridbag.setConstraints(specialite, constraints);
+        panneau.add(specialite);
+        
+        // label vide
+        buildConstraints(constraints, 2, 3, 1, 1, 30, 10);
+        constraints.fill = GridBagConstraints.NONE;
+        constraints.anchor = GridBagConstraints.WEST;
+        JLabel vide4 = new JLabel("", JLabel.LEFT);
+        gridbag.setConstraints(vide4, constraints);
+        panneau.add(vide4); 
+        
+// 5° ligne
+        // TextArea resultat
+        buildConstraints(constraints, 0, 4, 6, 3, 100, 50);
+        constraints.fill = GridBagConstraints.BOTH;
+        constraints.anchor = GridBagConstraints.CENTER;
+    	gridbag.setConstraints(scroll, constraints);
+        panneau.add(scroll);      
+                        
+// 6° ligne
+        // Bouton OK
+        buildConstraints(constraints, 0, 10, 1, 1, 10, 10);
+        constraints.fill = GridBagConstraints.NONE;
+        constraints.anchor = GridBagConstraints.CENTER;
+    	gridbag.setConstraints(okb, constraints);
+        panneau.add(okb);           
+ 	
+        // Content Pane
+        setContentPane(panneau);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    
+    public static void main(String[] arguments) {
+        FrameGaulois frame = new FrameGaulois();
+        frame.setVisible(true);
+    }
+    
+    public void actionPerformed(ActionEvent evt) {
+    	Object source = evt.getSource();
+
+    	if (source == okb) 
+	    { 
+			// Création d'un Villageois
+    		Villageois unGaulois = new Villageois(
+    					nom.getText(),
+    					adresse.getText(),
+    					lieu.getText(),
+    					specialite.getText()
+    		);
+			// Ajout du Villageois au vecteur
+			v.add(unGaulois);
+			
+			// On vide le TextArea
+			resultat.setText("");
+			// Affichage contenu vecteur dans le TextArea
+			for(int i=0;i<v.size();i++)
+			{
+				resultat.setText(
+					resultat.getText()
+					+v.get(i).getNom()+" - "
+					+v.get(i).getAdresse()+" - "
+					+v.get(i).getLieu()+" - "
+					+v.get(i).getSpecialite()					
+					+"\n");
+			}
+    	}
+	}
+}
+

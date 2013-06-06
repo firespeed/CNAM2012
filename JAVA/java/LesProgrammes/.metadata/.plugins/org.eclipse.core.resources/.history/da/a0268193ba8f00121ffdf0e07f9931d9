@@ -1,0 +1,12 @@
+
+public class Oeuf {
+	public int x; 
+	public Oeuf(){
+		x=5;
+	}
+	public Oeuf(int y)
+	{
+		x=y;
+	}
+
+}

@@ -1,0 +1,67 @@
+import java.awt.*;
+import java.sql.*;
+import javax.swing.*;
+
+import tp.src.FrameGaulois;
+
+import java.awt.event.*;
+
+public class TestListe extends JFrame implements ItemListener  {
+		private static final long serialVersionUID = 1L;
+		
+		JButton okb = new JButton("OK");
+	    JComboBox liste = new JComboBox();
+	    
+	    String driver = "com.mysql.jdbc.Driver";
+	    String cnx = "jdbc:mysql://localhost/lesgaulois";
+	    String user = "root";
+	    String psw = "";
+	    
+		JPanel pane;
+	
+		public TestListe() {		
+			super("Test");
+	        setSize(600, 500);
+	        this.setResizable(false);
+		        
+	        JPanel panneau = new JPanel();
+		
+		try
+	    	{
+	    		Class.forName(driver);
+				Connection conn = DriverManager.getConnection(cnx,user,psw);
+				Statement st = conn.createStatement();
+
+				String requete = "SELECT * FROM villageois ORDER BY NOM";			
+		    	ResultSet res = st.executeQuery(requete);
+	    		liste.addItem("");	    	
+		    	while(res.next())
+		    	{
+		    		liste.addItem(res.getString("NOM"));
+		    	}
+	    	}catch (Exception e)		    
+			{
+				System.out.println("ERREUR " + e.toString());
+			}
+	        liste.addItemListener(this);
+	        
+	        // Content Pane
+	        setContentPane(panneau);
+	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        setVisible(true);
+	    }
+
+		@Override
+		public void itemStateChanged(ItemEvent arg0) {
+			
+			String selection = (String) liste.getSelectedItem();
+			System.out.println("Selection : "+	selection);
+			
+		}
+		
+		  public static void main(String[] arguments) {
+		        TestListe frame = new TestListe();
+		    }
+
+
+}

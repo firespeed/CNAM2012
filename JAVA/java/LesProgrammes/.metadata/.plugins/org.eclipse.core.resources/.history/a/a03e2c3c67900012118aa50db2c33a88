@@ -1,0 +1,18 @@
+import java.util.Calendar;
+
+
+
+
+public class MainDate {
+
+	public static void main(String args[]) {
+
+		System.out.println(System.currentTimeMillis());
+		System.out.println(new java.util.Date().getTime());
+		System.out.println(Calendar.getlnstance().getTimelnMillis() );
+		System.out.println(Calendar.getlnstance().getTime().getTime ());
+		
+	}
+	
+	
+}

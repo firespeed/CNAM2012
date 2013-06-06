@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<annuaire xsi:noNamespaceSchemaLocation="annuaire.xsd" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	  <page numero="1" langue="US">
+		  <titre>XML Schema</titre>
+		  <lien>http://www.w3.org/XML/Schema/</lien>
+		  <cle_site>1</cle_site>
+	  </page>
+	  
+	  <page numero="2" langue="FR">
+		  <titre>XML Schema tome 0 : Introduction</titre>
+		  <lien>http://xmlfr.org/w3c/TR/xmlschema-0/</lien>
+		  <cle_site>1</cle_site>
+	  </page>
+  
+	  <page numero="3" langue="FR">
+		  <titre>XML Schema tome 1 : Structures</titre>
+		  <lien>http://xmlfr.org/w3c/TR/xmlschema-1/</lien>
+		  <cle_site>2</cle_site>
+	  </page>
+
+	  <site numero="1"> 
+		  <nom>W3C</nom>
+		  <url>http://www.w3.org/</url>
+	  </site>
+  
+	  <site numero="2">
+		  <nom>XMLfr</nom>
+		  <url>http://www.xmlfr.org/</url>
+	  </site>
+</annuaire>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;LesPiles.java&apos; to &apos;07.3 Les Piles&apos;&#x0D;&#x0A;- Original project: &apos;07.2 Saisie Vecteur&apos;&#x0D;&#x0A;- Destination element: &apos;07.3 Les Piles&apos;&#x0D;&#x0A;- Original element: &apos;LesPiles.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=07.3 Les Piles" element1="/src&lt;{LesPiles.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1363155987115" units="1" version="1.0"/>
+</session>

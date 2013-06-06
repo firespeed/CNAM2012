@@ -1,0 +1,26 @@
+import java.util.*;
+
+
+
+
+public class MainDate {
+
+	public static void main(String args[]) {
+
+		System.out.println(System.currentTimeMillis());
+		System.out.println(new java.util.Date().getTime());
+		
+		Calendar calendar = new GregorianCalendar();
+		
+		System.out.println(calendar.getInstance().getTimeInMillis());
+		
+//		System.out.println(calendar.getlnstance().getTimeInMillis());
+//		Calendar cal = new Calendar.
+		
+		
+//		System.out.println(Calendar.getlnstance().getTime().getTime ());
+		
+	}
+	
+	
+}

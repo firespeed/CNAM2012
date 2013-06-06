@@ -1,0 +1,20 @@
+class Personne {
+    String nom;int age;
+    
+Personne(String n,int a){
+nom = n;
+age = a;}
+
+void printPersonne(){
+System.out.print("Hello, mon nom est " + nom);
+System.out.println(". J'ai " + age + "  ans.");}
+
+public static void main (String args[]){
+Personne p;
+p = new Personne("Laura",20);
+p.printPersonne();
+System.out.println("-------------");
+p = new Personne("Tommy",6);
+p.printPersonne();
+System.out.println("-------------");}}
+

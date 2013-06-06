@@ -1,0 +1,10 @@
+
+public class Poule extends Oeuf {
+	
+	public int x; 
+	public Poule(){
+	
+	}
+	
+	
+}

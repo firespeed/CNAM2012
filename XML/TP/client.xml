@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE client  SYSTEM "clent.dtd">
+<client>
+	<nom_complet>
+		<nom>Fino</nom>
+		<prenom>Jean-Marie</prenom>		
+	</nom_complet>
+
+	<adresse>
+		<num_rue>24</num_rue>
+		<rue>Grand chemin</rue>
+		<ville>Montbéliard</ville>
+	</adresse>
+
+	<contact>
+		<telephone>03-81-90-99-00</telephone>
+		<telephone>03-81-90-99-10</telephone>
+		<fax>03-81-90-99-01</fax>
+		<fax>03-81-90-99-02</fax>
+		<email>jmfino@divae.fr</email>
+		<email>jmfino@wanadoo.fr</email>		
+	</contact>
+
+</client>

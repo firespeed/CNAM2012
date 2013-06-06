@@ -1,0 +1,24 @@
+import java.util.*;
+
+
+
+
+public class MainDate {
+
+	public static void main(String args[]) {
+
+		// Date actuelle avec l'objet système
+		System.out.println(System.currentTimeMillis());
+		
+		// Date actuelle avec la classe Date package java.util
+		System.out.println(new java.util.Date().getTime());
+		
+		// Date actuelle avec la classe GregorianCalendar package java.util
+		GregorianCalendar calendar = new GregorianCalendar();
+		System.out.println(calendar.getInstance().getTimeInMillis());
+		System.out.println(calendar.getInstance().getTime().getTime());
+		
+	}
+	
+	
+}

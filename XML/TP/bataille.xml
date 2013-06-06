@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesgaulois>
+  <!-- Table bataille -->
+    <bataille>
+        <ID_BATAILLE>0</ID_BATAILLE>
+        <ID_LIEU>4</ID_LIEU>
+        <NOM_BATAILLE>Bataille gauloise</NOM_BATAILLE>
+        <DATE_BATAILLE>0050-07-09</DATE_BATAILLE>
+    </bataille>
+    <bataille>
+        <ID_BATAILLE>1</ID_BATAILLE>
+        <ID_LIEU>2</ID_LIEU>
+        <NOM_BATAILLE>Babaorum</NOM_BATAILLE>
+        <DATE_BATAILLE>0050-09-15</DATE_BATAILLE>
+    </bataille>
+    <bataille>
+        <ID_BATAILLE>2</ID_BATAILLE>
+        <ID_LIEU>1</ID_LIEU>
+        <NOM_BATAILLE>Laudanum</NOM_BATAILLE>
+        <DATE_BATAILLE>0050-12-05</DATE_BATAILLE>
+    </bataille>
+    <bataille>
+        <ID_BATAILLE>3</ID_BATAILLE>
+        <ID_LIEU>6</ID_LIEU>
+        <NOM_BATAILLE>Booldechwingum</NOM_BATAILLE>
+        <DATE_BATAILLE>0050-12-02</DATE_BATAILLE>
+    </bataille>
+    <bataille>
+        <ID_BATAILLE>4</ID_BATAILLE>
+        <ID_LIEU>4</ID_LIEU>
+        <NOM_BATAILLE>Cohorte III</NOM_BATAILLE>
+        <DATE_BATAILLE>0050-09-01</DATE_BATAILLE>
+    </bataille>
+    <bataille>
+        <ID_BATAILLE>5</ID_BATAILLE>
+        <ID_LIEU>0</ID_LIEU>
+        <NOM_BATAILLE>Cohorte VI</NOM_BATAILLE>
+        <DATE_BATAILLE>0050-06-03</DATE_BATAILLE>
+    </bataille>
+    <bataille>
+        <ID_BATAILLE>6</ID_BATAILLE>
+        <ID_LIEU>7</ID_LIEU>
+        <NOM_BATAILLE>Legion XII</NOM_BATAILLE>
+        <DATE_BATAILLE>0050-10-08</DATE_BATAILLE>
+    </bataille>
+    <bataille>
+        <ID_BATAILLE>7</ID_BATAILLE>
+        <ID_LIEU>1</ID_LIEU>
+        <NOM_BATAILLE>Mercenaires</NOM_BATAILLE>
+        <DATE_BATAILLE>0050-05-31</DATE_BATAILLE>
+    </bataille>
+    <bataille>
+        <ID_BATAILLE>8</ID_BATAILLE>
+        <ID_LIEU>5</ID_LIEU>
+        <NOM_BATAILLE>Vikings</NOM_BATAILLE>
+        <DATE_BATAILLE>0050-07-29</DATE_BATAILLE>
+    </bataille>
+    <bataille>
+        <ID_BATAILLE>9</ID_BATAILLE>
+        <ID_LIEU>5</ID_LIEU>
+        <NOM_BATAILLE>Gladiateurs</NOM_BATAILLE>
+        <DATE_BATAILLE>0050-01-01</DATE_BATAILLE>
+    </bataille>
+</lesgaulois>

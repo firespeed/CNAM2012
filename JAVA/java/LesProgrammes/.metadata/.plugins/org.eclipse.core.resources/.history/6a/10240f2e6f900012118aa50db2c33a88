@@ -1,0 +1,15 @@
+import java.util.*;
+
+
+public class MainTimeZone {
+
+	Calendar calendar = new GregorianCalendar();
+	TimeZone timeZone = calendar.getTimeZone();
+	
+	calendar.setTimeZone(timeZone);
+	
+	timeZone.getDisplayName();
+	timeZone.getID();
+	timeZone.getOffset( System.currentTimeMillis() );
+	
+}

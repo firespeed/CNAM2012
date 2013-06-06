@@ -1,0 +1,14 @@
+import java.util.Calendar;
+
+
+public class MainDate2 {
+
+	public static void main(String args[]) {
+		
+		Calendar calendar = Calendar.getInstance();
+		if ( calendar.get( Calendar.MONTH )==Calendar.JANUARY ) {
+		system.out.prinln("la date courante est en janvier"); }
+	}
+	
+	
+}

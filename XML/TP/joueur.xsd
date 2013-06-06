@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Définition des types simples -->
+
+<!-- Définition du type de la ville -->
+<xsd:complexType name="typeVille" >
+	<xsd:simpleContent>
+		<xsd:extension base="xsd:string">
+			<xsd:attribute name="codePostal" type="xsd:string" use="required" />
+		</xsd:extension>
+	</xsd:simpleContent>
+</xsd:complexType>
+
+<!-- Définition du type des coordonnées -->
+<xsd:complexType name="typeCoordonnees" >
+		<xsd:sequence>
+			<xsd:element name="num" type="xsd:string"/>
+			<xsd:element name="adresse1" type="xsd:string"/>
+			<xsd:element name="adresse2" type="xsd:string"/>
+			<xsd:element name="ville" type="typeVille"/>
+			<xsd:element name="pays" />
+		</xsd:sequence>
+</xsd:complexType>
+
+<!-- Definition du type complex entier10a150 -->
+<xsd:simpleType name="entier10a50" >
+		<xsd:restriction base="xsd:integer" >
+			<xsd:minInclusive value="10" />
+			<xsd:maxInclusive value="50" />
+		</xsd:restriction>
+</xsd:simpleType>
+
+<!-- Définition du type des paiements -->
+<xsd:complexType name="typePaiement" >
+	<xsd:simpleContent>
+		<xsd:extension base="entier10a50" >
+			<xsd:attribute name="debut" type="xsd:date" use="required" />
+			<xsd:attribute name="fin" type="xsd:date" use="required" />
+		</xsd:extension>
+	</xsd:simpleContent>
+</xsd:complexType>
+
+<!-- Définition de abonnement -->
+<xsd:complexType name="typeAbonnement" >
+	<xsd:sequence>
+		<xsd:element name="paiement" type="typePaiement" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+	<xsd:attribute name="type" type="xsd:string" use="required" />
+</xsd:complexType>
+
+<!-- Définition pour la statut de la manche -->
+<xsd:simpleType name="typeStatut" >
+	<xsd:restriction base="xsd:integer">
+		<xsd:minInclusive value="0"/>
+		<xsd:maxInclusive value="1"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<!-- Définition de manche -->
+<xsd:complexType name="typeManche" >
+	<xsd:attribute name="numero" type="xsd:positiveInteger" use="required" />
+	<xsd:attribute name="mise" type="xsd:positiveInteger" use="required" />
+	<xsd:attribute name="gain" type="xsd:integer" use="required" />
+	<xsd:attribute name="statut" type="typeStatut" use="required" />
+	<xsd:attribute name="date_manche" type="xsd:dateTime" use="required" />
+</xsd:complexType>
+
+<!-- Définition de partie -->
+<xsd:complexType name="typePartie" >
+	<xsd:sequence>
+		<xsd:element name="manche" type="typeManche" minOccurs="1" maxOccurs="12"/>
+	</xsd:sequence>
+	<xsd:attribute name="nom" type="xsd:string" use="required" />
+</xsd:complexType>
+
+
+<!-- Définition de jeu -->
+<xsd:complexType name="typeJeu" >
+	<xsd:sequence>
+		<xsd:element name="partie" type="typePartie" maxOccurs="unbounded"/>
+	</xsd:sequence>
+	<xsd:attribute name="url" type="xsd:string" use="required" />
+	<xsd:attribute name="nom" type="xsd:string" use="required" />
+</xsd:complexType>
+
+
+<!-- Définition de typeJeu -->
+<xsd:complexType name="typeTJeu" >
+	<xsd:sequence>
+		<xsd:element name="jeu" type="typeJeu" maxOccurs="unbounded"/>
+	</xsd:sequence>
+	<xsd:attribute name="libelle" type="xsd:string" use="required" />
+</xsd:complexType>
+
+
+<!-- Definition de joueur -->
+<xsd:complexType name="typeJoueur" >
+		<xsd:sequence>
+			<xsd:element name="coordonnees" type="typeCoordonnees" />
+			<xsd:element name="abonnement"  type="typeAbonnement"/>
+			<xsd:element name="typeJeu"  type="typeTJeu"/>
+		</xsd:sequence>
+		<xsd:attribute name="nom" type="xsd:string" use="required" />
+		<xsd:attribute name="prenom" type="xsd:string" use="required" />
+		<xsd:attribute name="email" type="xsd:string" use="required" />
+		<xsd:attribute name="login" type="xsd:string" use="required" />
+</xsd:complexType>
+
+<xsd:element name="joueur" type="typeJoueur" />
+
+</xsd:schema>

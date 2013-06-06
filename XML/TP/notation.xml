@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="notation.xsd">
+
+	<note_devoir>11</note_devoir>
+	<note_devoir>AB</note_devoir>
+	<note_devoir>12 B+</note_devoir>
+	<note_devoir>14</note_devoir>
+	<note_devoir>A 20</note_devoir>
+
+</notation>
+
+

@@ -1,0 +1,37 @@
+
+public class MainPersonne {
+
+	
+	public static void main(String args[]) {
+		
+		Personne[] table = new Personne[5];
+		Personne p;
+		
+		try{
+			
+			p = new Personne("Durand", "Georges", 43);
+			table[0] = p;
+			p = new Personne("Dupont", "Albert", 50);
+			table[1] = p;
+			p = new Personne("Dubois", "Eric", 22);
+			table[2] = p;
+			p = new Personne("Martin", "Eric", 24);
+			table[3] = p;
+			p = new Personne("Dufait", "Alex", 2);
+			table[4] = p;
+
+		}catch(ChaineNulle cn){
+			System.out.println("Erreur personne ");
+			System.out.println (cn.getMessage()) ;
+		}
+		catch(AgeNegatif an){
+			System.out.println("Erreur age : "+an.age);
+		}
+		finally{
+			for(int i=0;i<table.length;i++)
+			{
+				table[i].affiche();
+			}
+		}
+	}	
+}

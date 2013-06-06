@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE boutique SYSTEM "commande.dtd">
+<boutique>
+	<commande type="bureautique et informatique">
+		<numerodecommande>1</numerodecommande>
+		<datecommande>17/01/2007</datecommande>
+		<client origine="entreprise">Bernard</client>
+		<produit>
+			<nom>Graveur * 16</nom>
+			<quantite>15</quantite>
+			<pu>35</pu>
+		</produit>
+		<produit>
+			<nom>DVD-R</nom>
+			<quantite>10</quantite>
+			<pu>5</pu>
+		</produit>
+	</commande>
+	<commande type="papeterie">
+		<numerodecommande>2</numerodecommande>
+		<datecommande>18/01/2007</datecommande>
+		<client origine="particulier">Jean-Marie</client>
+		<produit>
+			<nom>Feutre pour DVD</nom>
+			<quantite>100</quantite>
+			<pu>0,5</pu>
+		</produit>
+	</commande>
+	<commande type="bureautique et informatique">
+		<numerodecommande>3</numerodecommande>
+		<datecommande>21/01/2007</datecommande>
+		<client origine="entreprise">Bernard</client>
+		<produit>
+			<nom>Ecran 21 pouces</nom>
+			<quantite>1</quantite>
+			<pu>120</pu>
+		</produit>
+	</commande>
+	<commande type="bureautique et informatique">
+		<numerodecommande>4</numerodecommande>
+		<datecommande>27/01/2007</datecommande>
+		<client origine="entreprise">Bernard</client>
+		<produit>
+			<nom>Clavier</nom>
+			<quantite>5</quantite>
+			<pu>10</pu>
+		</produit>
+	</commande>
+	<commande type="papeterie">
+		<numerodecommande>5</numerodecommande>
+		<datecommande>27/01/2007</datecommande>
+		<client origine="particulier">Bea</client>
+		<produit>
+			<nom>Intercalaire</nom>
+			<quantite>100</quantite>
+			<pu>0,5</pu>
+		</produit>
+	</commande>
+</boutique>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<xsd:complexType name="type_projet">
+		<xsd:sequence>
+			<xsd:element name="but" type="xsd:string"/>
+			<xsd:element name="membre_équipe" type="type_membre_equipe" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="projet_id" type="xsd:string" use="required"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="type_employe">
+		<xsd:sequence>
+			<xsd:element name="nom" type="xsd:string"/>
+			<xsd:element name="tâches" type="type_tâche" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="numéro_sécu" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="type_tâche">
+		<xsd:attribute name="projet_id" type="xsd:string" use="required"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="type_membre_equipe">
+		<xsd:attribute name="employé" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="type_lesProjets">
+		<xsd:sequence>
+
+			<xsd:element name="projet" type="type_projet" maxOccurs="unbounded">
+
+				<xsd:key name="cle_projet">
+					<xsd:selector xpath=".//projet"/>
+					<xsd:field xpath="./@projet_id"/>
+				</xsd:key>
+
+				<xsd:keyref name="tâches" refer="cle_projet">
+					<xsd:selector xpath=".//employé/tâches"/>
+					<xsd:field xpath="./projet_id"/>
+				</xsd:keyref>
+
+			</xsd:element>
+
+			<xsd:element name="employé" type="type_employe" maxOccurs="unbounded">
+
+				<xsd:unique name="clef_secu">
+					<xsd:selector xpath=".//employé"/>
+					<xsd:field xpath="./@numéro_sécu"/>
+				</xsd:unique>
+
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="lesProjets" type="type_lesProjets"/>
+
+</xsd:schema>

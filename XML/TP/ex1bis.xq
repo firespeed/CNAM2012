@@ -1,0 +1,1 @@
+doc("commande.xml")/boutique/commande/client

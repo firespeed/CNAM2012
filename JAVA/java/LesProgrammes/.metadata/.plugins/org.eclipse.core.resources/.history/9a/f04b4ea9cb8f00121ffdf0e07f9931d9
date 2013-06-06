@@ -1,0 +1,20 @@
+
+public class Q6 {
+
+	public static void main (String[] args)
+	{
+		String o = "engage le jeu que je le gagne";
+		
+		String r ="";	 
+	    String o2 = o.replace(" ", "");
+		int length = o2.length();	 
+	    for ( int i = length - 1 ; i >= 0 ; i-- )
+	        r += o2.charAt(i);
+ 
+	    if (o2.equals(r))
+	         System.out.println("oui");
+	      else
+	         System.out.println("non");
+	}
+
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesgaulois>
+  <!-- Table lieu -->
+    <lieu>
+        <ID_LIEU>0</ID_LIEU>
+        <NOM_LIEU>Village gaulois</NOM_LIEU>
+    </lieu>
+    <lieu>
+        <ID_LIEU>1</ID_LIEU>
+        <NOM_LIEU>Babaorum</NOM_LIEU>
+    </lieu>
+    <lieu>
+        <ID_LIEU>2</ID_LIEU>
+        <NOM_LIEU>Laudanum</NOM_LIEU>
+    </lieu>
+    <lieu>
+        <ID_LIEU>3</ID_LIEU>
+        <NOM_LIEU>Oposum</NOM_LIEU>
+    </lieu>
+    <lieu>
+        <ID_LIEU>4</ID_LIEU>
+        <NOM_LIEU>Champs de Nioutechnologix</NOM_LIEU>
+    </lieu>
+    <lieu>
+        <ID_LIEU>5</ID_LIEU>
+        <NOM_LIEU>3e chene a droite de la carriere</NOM_LIEU>
+    </lieu>
+    <lieu>
+        <ID_LIEU>6</ID_LIEU>
+        <NOM_LIEU>En mer</NOM_LIEU>
+    </lieu>
+    <lieu>
+        <ID_LIEU>7</ID_LIEU>
+        <NOM_LIEU>Grottes</NOM_LIEU>
+    </lieu>
+</lesgaulois>

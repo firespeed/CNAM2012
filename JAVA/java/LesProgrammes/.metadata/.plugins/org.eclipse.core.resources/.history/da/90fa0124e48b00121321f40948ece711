@@ -1,0 +1,24 @@
+class Eleve
+	{ 
+		public Eleve (String n)
+		{ 
+			nom = n ;
+			resul = Mention.NC ; // valeur par défaut
+		}
+
+		public void setResul (Mention r)
+		{ 
+			resul = r ;
+		}
+	
+		public Mention getResul()
+		{ 
+			return resul ;
+		}
+		public String getNom()
+		{ 
+			return nom ;
+		}
+		private String nom ;
+		private Mention resul ;
+	}

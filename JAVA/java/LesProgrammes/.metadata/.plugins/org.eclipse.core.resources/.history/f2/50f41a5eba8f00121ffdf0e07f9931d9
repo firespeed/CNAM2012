@@ -1,0 +1,7 @@
+
+public class Oeuf {
+	public int x; 
+	public Oeuf(){
+		x=5;
+	}
+}

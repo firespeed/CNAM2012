@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;HashSetEleve&apos; to &apos;TreeSetEleve&apos;&#x0D;&#x0A;- Original project: &apos;12.10 Exercice TreeSetEleve&apos;&#x0D;&#x0A;- Original element: &apos;HashSetEleve&apos;&#x0D;&#x0A;- Renamed element: &apos;TreeSetEleve&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;HashSetEleve&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{HashSetEleve.java[HashSetEleve" matchStrategy="1" name="TreeSetEleve" qualified="false" references="true" similarDeclarations="false" stamp="1363592024397" textual="false" version="1.0"/>
+</session>

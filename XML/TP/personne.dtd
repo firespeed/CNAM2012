@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT personne (nom, profession*)>
+<!ELEMENT nom (prénom, nom_famille)>
+<!ELEMENT prénom (#PCDATA)>
+<!ELEMENT nom_famille (#PCDATA)>
+<!ELEMENT profession (#PCDATA)>

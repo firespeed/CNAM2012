@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<achat commande="CDE-123456"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="achat.xsd">
+	 <client>John Smith</client>
+	 <email>jsmith@gmail.com</email>
+	  <livraison>
+		<nom>Ola Nordmann</nom>
+		<addresse>Langgt 23</addresse>
+		<ville>4000 Stavanger</ville>
+		<pays>Norway</pays>
+	  </livraison>
+	  <article>
+		<titre>Empire Burlesque</titre>
+		<note>Special Edition</note>
+		<quantite>1</quantite>
+		<prix>10.90</prix>
+	  </article>
+	  <article>
+		<titre>Hide your heart</titre>
+		<quantite>1</quantite>
+		<prix>9.90</prix>
+	  </article>
+</achat> 

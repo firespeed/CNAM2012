@@ -1,0 +1,21 @@
+class Personne {
+
+	private String nom;
+	private String prenom;
+	private int age;
+	
+	Personne(String nom, String prenom, int age) throws ChaineNulle, AgeNegatif
+	{
+		if(nom.equals("")) throw new ChaineNulle("Erreur chaine vide nom ");
+		if(prenom.equals("")) throw new ChaineNulle("Erreur chaine vide nom ");
+		if(age < 0) throw new AgeNegatif(age);
+		this.nom = nom;
+		this.prenom = prenom;
+		this.age = age;
+	}
+	public void affiche()
+	{ 
+		System.out.println ("Personne : " + this.nom + " " + this.prenom + " "+this.age) ;
+	}
+	
+}

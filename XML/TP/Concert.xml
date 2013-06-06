@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Concert>
+	<Entete>Les Concerts d’Anacreon</Entete>
+		<Date>Jeudi 17 Janvier 2002, 20H30</Date>
+		<Lieu>Chapelle des Ursules</Lieu>
+		<Ensemble>A deux violes esgales</Ensemble>
+		<Compositeurs>
+		M. Marais, D. Castello, F. Rognoni
+		</Compositeurs>
+</Concert>

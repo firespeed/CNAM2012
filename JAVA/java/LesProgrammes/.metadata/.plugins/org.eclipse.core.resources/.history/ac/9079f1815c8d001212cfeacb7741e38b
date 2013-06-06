@@ -1,0 +1,19 @@
+import java.awt.*;
+import java.sql.*;
+import javax.swing.*;
+
+import java.awt.event.*;
+import java.util.*;
+
+public class TestListe implements ItemListener  {
+		
+	    JButton okb = new JButton("OK");
+	    JTextField requete = new JTextField("",12 );
+	    JTextArea resultat = new JTextArea(12,30);
+		JScrollPane pane2 = new JScrollPane(resultat);
+		
+		JPanel pane;
+		
+
+
+}

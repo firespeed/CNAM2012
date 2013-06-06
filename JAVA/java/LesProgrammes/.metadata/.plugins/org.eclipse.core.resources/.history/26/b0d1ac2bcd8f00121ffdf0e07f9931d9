@@ -1,0 +1,14 @@
+
+public class TestQ7 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Q7 test = new Q7(253, 126);
+		System.out.println("A = "+test.A(test.a, test.b));		
+		System.out.println("B = "+test.B(test.a, test.b));
+
+	}
+
+}

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesgaulois>
+  <!-- Table villageois -->
+    <villageois>
+        <NOM>Abraracourcix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Abraracourcix.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Babaorum</NOM_BATAILLE>
+        <QTE>4</QTE>
+        <NOM_CASQUE>Spartacus</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Agecanonix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Agecanonix.jpg</IMAGE>
+        <NOM_SPECIALITE>Villageois</NOM_SPECIALITE>
+        <NOM_BATAILLE>Legion XII</NOM_BATAILLE>
+        <QTE>12</QTE>
+        <NOM_CASQUE>Centurion</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Alambix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Alambix.jpg</IMAGE>
+        <NOM_SPECIALITE>Marchand</NOM_SPECIALITE>
+        <NOM_BATAILLE>Cohorte VI</NOM_BATAILLE>
+        <QTE>8</QTE>
+        <NOM_CASQUE>Maximum</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Allegorix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>indisponible.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Gladiateurs</NOM_BATAILLE>
+        <QTE>8</QTE>
+        <NOM_CASQUE>Imperial Gallic</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Amerix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Amerix.jpg</IMAGE>
+        <NOM_SPECIALITE>Artisan</NOM_SPECIALITE>
+        <NOM_BATAILLE>Gladiateurs</NOM_BATAILLE>
+        <QTE>12</QTE>
+        <NOM_CASQUE>Centurion officier</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Amnesix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Amnesix.jpg</IMAGE>
+        <NOM_SPECIALITE>Druide</NOM_SPECIALITE>
+        <NOM_BATAILLE>Cohorte III</NOM_BATAILLE>
+        <QTE>3</QTE>
+        <NOM_CASQUE>Elendil</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Analgesix</NOM>
+        <ADRESSE>bateau</ADRESSE>
+        <IMAGE>Analgesix.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Cohorte III</NOM_BATAILLE>
+        <QTE>8</QTE>
+        <NOM_CASQUE>Centurion officier</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Antibiotix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Antibiotix.jpg</IMAGE>
+        <NOM_SPECIALITE>Marchand</NOM_SPECIALITE>
+        <NOM_BATAILLE>Babaorum</NOM_BATAILLE>
+        <QTE>7</QTE>
+        <NOM_CASQUE>Corinthien </NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Aplusbegalix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Aplusbegalix.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Cohorte VI</NOM_BATAILLE>
+        <QTE>7</QTE>
+        <NOM_CASQUE>Spartacus</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Appatix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>indisponible.jpg</IMAGE>
+        <NOM_SPECIALITE>Villageois</NOM_SPECIALITE>
+        <NOM_BATAILLE>Cohorte VI</NOM_BATAILLE>
+        <QTE>15</QTE>
+        <NOM_CASQUE>Maximum</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Asterix</NOM>
+        <ADRESSE>cote carrieres</ADRESSE>
+        <IMAGE>Asterix.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Gladiateurs</NOM_BATAILLE>
+        <QTE>5</QTE>
+        <NOM_CASQUE>Centurion</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Asthmatix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>indisponible.jpg</IMAGE>
+        <NOM_SPECIALITE>Villageois</NOM_SPECIALITE>
+        <NOM_BATAILLE>Mercenaires</NOM_BATAILLE>
+        <QTE>8</QTE>
+        <NOM_CASQUE>Corinthien </NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Aventurepix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>indisponible.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Gladiateurs</NOM_BATAILLE>
+        <QTE>5</QTE>
+        <NOM_CASQUE>Centurion</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Carferrix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Carferrix.jpg</IMAGE>
+        <NOM_SPECIALITE>Artisan</NOM_SPECIALITE>
+        <NOM_BATAILLE>Laudanum</NOM_BATAILLE>
+        <QTE>5</QTE>
+        <NOM_CASQUE>Maximum</NOM_CASQUE>
+    </villageois>
+    <villageois>
+          <NOM>Catedralgotix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Catedralgotix.jpg</IMAGE>
+        <NOM_SPECIALITE>Villageois</NOM_SPECIALITE>
+        <NOM_BATAILLE>Bataille gauloise</NOM_BATAILLE>
+        <QTE>6</QTE>
+        <NOM_CASQUE>Romain</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Cetautomatix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Cetautomatix.jpg</IMAGE>
+        <NOM_SPECIALITE>Artisan</NOM_SPECIALITE>
+        <NOM_BATAILLE>Laudanum</NOM_BATAILLE>
+        <QTE>9</QTE>
+        <NOM_CASQUE>Elendil</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Choucroutgarnix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>indisponible.jpg</IMAGE>
+        <NOM_SPECIALITE>Villageois</NOM_SPECIALITE>
+        <NOM_BATAILLE>Legion XII</NOM_BATAILLE>
+        <QTE>12</QTE>
+        <NOM_CASQUE>Elendil</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Diagnostix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Diagnostix.jpg</IMAGE>
+        <NOM_SPECIALITE>Druide</NOM_SPECIALITE>
+        <NOM_BATAILLE>Bataille gauloise</NOM_BATAILLE>
+        <QTE>5</QTE>
+        <NOM_CASQUE>Troyen</NOM_CASQUE>
+    </villageois>
+     <villageois>
+        <NOM>Dithyrambix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>indisponible.jpg</IMAGE>
+        <NOM_SPECIALITE>Villageois</NOM_SPECIALITE>
+        <NOM_BATAILLE>Cohorte VI</NOM_BATAILLE>
+        <QTE>8</QTE>
+        <NOM_CASQUE>Imperial Gallic</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Industrichimix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>indisponible.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Gladiateurs</NOM_BATAILLE>
+        <QTE>11</QTE>
+        <NOM_CASQUE>Centurion officier</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Obelix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Obelix.jpg</IMAGE>
+        <NOM_SPECIALITE>Porteur de Mehnir</NOM_SPECIALITE>
+        <NOM_BATAILLE>Babaorum</NOM_BATAILLE>
+        <QTE>30</QTE>
+        <NOM_CASQUE>Centurion</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Ordralfabetix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Ordralfabetix.jpg</IMAGE>
+        <NOM_SPECIALITE>Marchand</NOM_SPECIALITE>
+        <NOM_BATAILLE>Vikings</NOM_BATAILLE>
+        <QTE>3</QTE>
+        <NOM_CASQUE>Spartacus</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Orthopedix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Orthopedix.jpg</IMAGE>
+        <NOM_SPECIALITE>Marchand</NOM_SPECIALITE>
+        <NOM_BATAILLE>Babaorum</NOM_BATAILLE>
+        <QTE>5</QTE>
+        <NOM_CASQUE>Centurion</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Panoramix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Panoramix.jpg</IMAGE>
+        <NOM_SPECIALITE>Druide</NOM_SPECIALITE>
+        <NOM_BATAILLE>Booldechwingum</NOM_BATAILLE>
+        <QTE>6</QTE>
+        <NOM_CASQUE>Spartiate</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Petisuix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Petisuix.jpg</IMAGE>
+        <NOM_SPECIALITE>Artisan</NOM_SPECIALITE>
+        <NOM_BATAILLE>Booldechwingum</NOM_BATAILLE>
+        <QTE>3</QTE>
+        <NOM_CASQUE>Corinthien </NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Plantaquatix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Plantaquatix.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Cohorte III</NOM_BATAILLE>
+        <QTE>9</QTE>
+        <NOM_CASQUE>Spartiate</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Pneumatix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Pneumatix.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Vikings</NOM_BATAILLE>
+        <QTE>7</QTE>
+        <NOM_CASQUE>Troyen</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Porquepix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>indisponible.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Legion XII</NOM_BATAILLE>
+        <QTE>1</QTE>
+        <NOM_CASQUE>Elendil</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Quatredeuxsix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Quatredeuxsix.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Cohorte III</NOM_BATAILLE>
+        <QTE>4</QTE>
+        <NOM_CASQUE>Imperial Gallic</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Salamix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Salamix.jpg</IMAGE>
+        <NOM_SPECIALITE>Villageois</NOM_SPECIALITE>
+        <NOM_BATAILLE>Babaorum</NOM_BATAILLE>
+        <QTE>8</QTE>
+        <NOM_CASQUE>Maximum</NOM_CASQUE>
+    </villageois>
+    <villageois>
+        <NOM>Tournedix</NOM>
+        <ADRESSE></ADRESSE>
+        <IMAGE>Tournedix.jpg</IMAGE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+        <NOM_BATAILLE>Booldechwingum</NOM_BATAILLE>
+        <QTE>10</QTE>
+        <NOM_CASQUE>Romain</NOM_CASQUE>
+    </villageois>
+</lesgaulois>

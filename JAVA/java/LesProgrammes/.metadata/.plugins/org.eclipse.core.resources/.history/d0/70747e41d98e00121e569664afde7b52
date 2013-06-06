@@ -1,0 +1,112 @@
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class HashSetEleve {
+	
+	public static void afficheCours(HashSet<Eleve> cours){
+		System.out.println("Liste des élèves du cours:"+cours.getClass().getName());
+		Iterator<Eleve> iter = cours.iterator();		
+		System.out.println("----------------------------------");
+		while(iter.hasNext())
+		{
+			Eleve eleve = new Eleve();
+			eleve = iter.next();
+			System.out.println("|"+eleve.getNom()+" " +eleve.getPrenom()+"|");
+			System.out.println("----------------------------------");
+		}
+		
+	}
+	
+	public static void main (String args[])
+	{
+		String reponse;
+		HashSet<Eleve> cours1 = new HashSet<Eleve>();
+		HashSet<Eleve> cours2 = new HashSet<Eleve>();
+		
+		System.out.print("Voulez-vous saisir un eleve ? (O/N)");
+		reponse = Clavier.lireString();
+		System.out.println();
+	
+		// Saisie du cours 1
+		while(reponse.equals("O"))
+		{
+			// Création d'un élève
+			Eleve eleve = new Eleve();
+			
+			System.out.print("Nom : ");			
+			eleve.setNom(Clavier.lireString());
+			System.out.println();
+			
+			System.out.print("Prenom : ");
+			eleve.setPrenom(Clavier.lireString());
+			System.out.println();
+			
+			cours1.add(eleve);			
+			
+			System.out.print("Voulez-vous saisir un autre eleve ? (O/N)");
+			reponse = Clavier.lireString();
+			System.out.println();
+		}
+	
+		// Saisie du cours 2
+		while(reponse.equals("O"))
+		{
+			// Création d'un élève
+			Eleve eleve = new Eleve();
+			
+			System.out.print("Nom : ");			
+			eleve.setNom(Clavier.lireString());
+			System.out.println();
+			
+			System.out.print("Prenom : ");
+			eleve.setPrenom(Clavier.lireString());
+			System.out.println();
+			
+			cours2.add(eleve);			
+			
+			System.out.print("Voulez-vous saisir un autre eleve ? (O/N)");
+			reponse = Clavier.lireString();
+			System.out.println();
+		}
+		afficheCours(cours1);
+		
+/*		
+		System.out.println("Liste des élèves du cours1:");
+		Iterator<Eleve> iter1 = cours1.iterator();		
+		while(iter1.hasNext())
+		{
+			Eleve eleve = new Eleve();
+			eleve = iter1.next();
+			System.out.println("----------------------------------");
+			System.out.println("Nom : "+eleve.getNom());
+			System.out.println("Prénom : "+eleve.getPrenom());
+			System.out.println("----------------------------------");
+		}
+
+		System.out.println("Liste des élèves du cours2:");
+		Iterator<Eleve> iter2 = cours2.iterator();		
+		while(iter1.hasNext())
+		{
+			Eleve eleve = new Eleve();
+			eleve = iter1.next();
+			System.out.println("----------------------------------");
+			System.out.println("Nom : "+eleve.getNom());
+			System.out.println("Prénom : "+eleve.getPrenom());
+			System.out.println("----------------------------------");
+		}
+*/		
+		// Union des 2 cours
+		HashSet<Eleve> coursAll = new HashSet<Eleve>();
+		coursAll.addAll(cours1);
+		coursAll.addAll(cours2);
+		
+
+		
+	}
+}
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<departement 	xsi:noNamespaceSchemaLocation="departement.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<employe>Georges Durand</employe>
+</departement>

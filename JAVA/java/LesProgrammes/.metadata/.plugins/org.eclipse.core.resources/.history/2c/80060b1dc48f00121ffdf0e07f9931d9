@@ -1,0 +1,26 @@
+public class NbPrem {
+
+		public static void main (String[] args)
+		{
+			int jusqua = 200;
+			
+			for(int i=jusqua;i==0;i--)
+			{
+System.out.println("X");				
+				boolean premier = true;
+				int k=0;
+				for(int j=2;j<i;j++)
+				{
+					k = i%j;
+					if(k==0)
+					{
+						// C'est un diviseur
+						premier = false;
+					}
+				}
+				if(premier) System.out.println(i);
+			}
+		}
+			
+	}
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<joueur nom="Durand" prenom="Georges" email="georges.durand@gmail.com" login="GDurand"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="joueur.xsd">
+
+<coordonnees>
+	<num>25Bis</num>
+	<adresse1>avenue Charles De Gaulle</adresse1>
+	<adresse2>BatimentC</adresse2>
+	<ville codePostal="90 000">Belfort</ville>
+	<pays>France</pays>
+</coordonnees>
+
+<abonnement type="abonné">
+	<paiement debut ="2010-11-01" fin="2010-11-30" >50</paiement>
+	<paiement debut ="2010-12-01" fin="1010-12-31" >30</paiement>
+	<paiement debut ="2011-01-01" fin="1011-01-31" >40</paiement>
+</abonnement>
+
+<typeJeu libelle="Carte">
+	<jeu url="www.jouer.com" nom="Poker">
+		<partie nom="Partie 1">
+			<manche numero="1" mise="1" gain="3" statut="1" date_manche="2010-11-01T09:10:01" />
+			<manche numero="2" mise="1" gain="3" statut="1" date_manche="2010-11-01T09:15:12" />
+			<manche numero="3" mise="1" gain="0" statut="0" date_manche="2010-11-01T09:21:34" />
+			<manche numero="4" mise="1" gain="0" statut="0" date_manche="2010-11-01T09:34:00" />
+		</partie>
+	</jeu>
+</typeJeu>
+
+</joueur>

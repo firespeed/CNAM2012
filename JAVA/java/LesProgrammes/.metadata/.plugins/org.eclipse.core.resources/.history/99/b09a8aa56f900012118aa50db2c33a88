@@ -1,0 +1,21 @@
+import java.util.*;
+
+
+public class MainTimeZone {
+
+	TimeZone timeZone1 = TimeZone.getTimeZone("America/Los_Angeles");
+	TimeZone timeZone2 = TimeZone.getTimeZone("Europe/Copenhagen");
+
+	Calendar calendar = new GregorianCalendar();
+
+	long timeCPH = calendar.getTimeInMillis();
+
+//	System.out.println("timeCPH  = " + timeCPH);
+//	System.out.println("hour     = " + calendar.get(Calendar.HOUR_OF_DAY));
+
+	calendar.setTimeZone(timeZone1);
+
+	long timeLA = calendar.getTimeInMillis();
+//	System.out.println("timeLA   = " + timeLA);
+//	System.out.println("hour     = " + calendar.get(Calendar.HOUR_OF_DAY));
+}

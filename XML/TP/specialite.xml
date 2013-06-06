@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lesgaulois>
+    <specialite>
+        <ID_SPECIALITE>0</ID_SPECIALITE>
+        <NOM_SPECIALITE>Guerrier</NOM_SPECIALITE>
+    </specialite>
+    <specialite>
+        <ID_SPECIALITE>1</ID_SPECIALITE>
+        <NOM_SPECIALITE>Porteur de Mehnir</NOM_SPECIALITE>
+    </specialite>
+    <specialite>
+        <ID_SPECIALITE>2</ID_SPECIALITE>
+        <NOM_SPECIALITE>Barde</NOM_SPECIALITE>
+    </specialite>
+    <specialite>
+        <ID_SPECIALITE>3</ID_SPECIALITE>
+        <NOM_SPECIALITE>Druide</NOM_SPECIALITE>
+    </specialite>
+    <specialite>
+        <ID_SPECIALITE>4</ID_SPECIALITE>
+        <NOM_SPECIALITE>Espion</NOM_SPECIALITE>
+    </specialite>
+    <specialite>
+        <ID_SPECIALITE>5</ID_SPECIALITE>
+        <NOM_SPECIALITE>Villageois</NOM_SPECIALITE>
+    </specialite>
+    <specialite>
+        <ID_SPECIALITE>6</ID_SPECIALITE>
+        <NOM_SPECIALITE>Artisan</NOM_SPECIALITE>
+    </specialite>
+    <specialite>
+        <ID_SPECIALITE>7</ID_SPECIALITE>
+        <NOM_SPECIALITE>Marchand</NOM_SPECIALITE>
+    </specialite>
+</lesgaulois>

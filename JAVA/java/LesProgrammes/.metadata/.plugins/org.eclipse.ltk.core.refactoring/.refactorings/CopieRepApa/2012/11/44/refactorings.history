@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CopieRepApa/CopyDelibApa.bat&apos; to &apos;CopyDelibApa.batT&apos;" description="Rename resource &apos;CopyDelibApa.bat&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="CopyDelibApa.bat" name="CopyDelibApa.batT" stamp="1352025860946" updateReferences="true"/>
+</session>

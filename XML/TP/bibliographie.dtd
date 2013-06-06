@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Déclarations des imbrications -->
+	<!ELEMENT bibliographie (livre|article)*>
+	<!ELEMENT livre (titre, auteur+, edition, avis?)>
+	<!ELEMENT edition (editeur, lieu_edition, lieu_impression, isbn)>
+	<!ELEMENT article (titre, auteur+, journal)>
+	<!ELEMENT journal (page, num_journal)>
+
+<!-- Déclarations des structures des balises en fin d'arborecence -->
+	<!ELEMENT titre (#PCDATA)>
+	<!ELEMENT auteur (#PCDATA)>
+	<!ELEMENT editeur (#PCDATA)>
+	<!ELEMENT lieu_edition (#PCDATA)>
+	<!ELEMENT lieu_impression (#PCDATA)>
+	<!ELEMENT isbn (#PCDATA)>
+	<!ELEMENT avis (#PCDATA)>
+	<!ELEMENT page (#PCDATA)>
+	<!ELEMENT num_journal (#PCDATA)>
+	<!ELEMENT annee (#PCDATA)>
+
+
+<!-- Déclarations des attributs -->
+
+<!-- Avec un attribut facultatif -->
+	<!ATTLIST titre soustitre CDATA #IMPLIED>
+	<!ATTLIST tome nb_pages CDATA #REQUIRED soustitre CDATA #IMPLIED>
+
+<!-- Avec une valeur par défaut -->
+	<!ATTLIST journal nom_journal CDATA "Feuille de Chou" >
+
+<!-- Avec une énumération -->
+	<!ATTLIST journal annee (2000 | 2001 | 2002 | Avant2000 | inconnue ) #REQUIRED >

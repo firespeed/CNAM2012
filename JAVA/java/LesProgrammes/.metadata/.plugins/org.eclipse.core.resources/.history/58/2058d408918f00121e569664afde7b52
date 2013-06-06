@@ -1,0 +1,86 @@
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class HashSetEleve  {
+	
+	public static void afficheCours(HashSet<Eleve> cours, String lib){
+		
+		System.out.println("Liste des élèves du cours : "+lib);
+		Iterator<Eleve> iter = cours.iterator();		
+		while(iter.hasNext())
+		{
+			Eleve eleve = new Eleve();
+			eleve = iter.next();
+			System.out.print("|"+eleve.getNom()+" " +eleve.getPrenom()+"|");
+		}
+		System.out.println();
+		System.out.println("----------------------------------");
+		
+	}
+	
+	public static void main (String args[])
+	{
+		Eleve e1 = new Eleve("Durand","Tony",20, 1);
+		Eleve e2 = new Eleve("Dupont","Anne",20, 2);
+		Eleve e3 = new Eleve("Martin","Morgane",20, 3);
+		Eleve e4 = new Eleve("Martin","Alex",20, 4);
+		Eleve e5 = new Eleve("Dubois","Axel",20, 5);
+		
+ 		HashSet<Eleve> cours1 = new HashSet<Eleve>();
+ 		HashSet<Eleve> cours2 = new HashSet<Eleve>();
+ 		
+ 		cours1.add(e1);
+ 		cours1.add(e2);
+ 		cours1.add(e3);
+ 		cours1.add(e4);
+
+ 		cours2.add(e1);
+ 		cours2.add(e3);
+ 		cours2.add(e5);
+ 			 		
+/*
+  		HashSet<Eleve> cours1 = new HashSet<Eleve>(){
+ 
+			private static final long serialVersionUID = 1L;
+			{add(new Eleve("Durand","Tony",20, 1));}
+			{add(new Eleve("Dupont","Anne",20, 2));}
+			{add(new Eleve("Martin","Morgane",20, 3));}
+			{add(new Eleve("Martin","Alex",20, 4));}
+		};
+				
+		HashSet<Eleve> cours2 = new HashSet<Eleve>(){
+			private static final long serialVersionUID = 1L;
+			{add(new Eleve("Durand","Tony",20, 1));}
+			{add(new Eleve("Martin","Morgane",20, 3));}
+			{add(new Eleve("Dubois","Axel",20, 5));}
+		};
+*/		
+		Eleve e = new Eleve("Durand","Tony",20, 1);
+		boolean ajoute = cours1.add(e);
+		if (ajoute) System.out.println("Eleve ajouté");
+		else System.out.println("Eleve deja present");
+		
+		
+		afficheCours(cours1, "Cours N° 1");
+		afficheCours(cours2, "Cours N° 2");
+
+		
+		// Union des 2 cours
+		HashSet<Eleve> coursAll = new HashSet<Eleve>();
+		coursAll.addAll(cours1);
+		coursAll.addAll(cours2);
+		afficheCours(coursAll, "Tous les élèves");
+		
+		HashSet<Eleve> coursInter = new HashSet<Eleve>();
+		coursInter.addAll(cours1);
+		coursInter.retainAll(cours2);
+		afficheCours(coursInter, "les élèves participants à tous les cours");
+
+		HashSet<Eleve> coursDiff = new HashSet<Eleve>();
+		coursDiff.addAll(cours1);
+		coursDiff.removeAll(cours2);
+		afficheCours(coursDiff, "les élèves ne participants qu'au cours N°1");
+
+		
+	}
+}

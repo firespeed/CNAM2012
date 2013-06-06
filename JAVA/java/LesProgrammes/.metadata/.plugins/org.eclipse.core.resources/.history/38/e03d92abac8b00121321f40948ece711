@@ -1,0 +1,40 @@
+import java.io.IOException;
+import java.util.*;
+
+public class LesPiles {
+	public static void main (String args[]) throws IOException
+	{
+	
+		Stack<String> s = new Stack<String>();
+		
+		s.push("Un");
+		s.push("Un");		// Ajout des valeurs
+		s.push("Deux");
+		s.push("Trois");
+		s.push("Quatre");
+		s.push("Cinq");
+		s.push("Six");
+
+		Iterator<String> iter = s.iterator();
+		int i = 0;while (iter.hasNext())
+		{
+			System.out.println(i+" => "+s.peek());
+			i++;
+		}
+				
+
+		String s1 = s.pop();// s1 vaut "Six"
+		String s2 = s.pop();// s2 vaut "Cinq"
+		String s3 = s.peek();// s3 vaut "Quatre"
+
+
+		int y = s.search("Deux"); // retourne 2
+
+
+		boolean isEmpty = s.empty(); // retourne false
+
+		
+	}
+	
+	
+}

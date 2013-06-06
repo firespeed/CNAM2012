@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE bibliographie SYSTEM "bibliographie.dtd">
+<bibliographie>
+	<livre>
+		<titre soustitre="Ma vie">Live</titre>
+		<auteur>Georges Dupond</auteur>
+		<edition>
+			<editeur>Folio</editeur>
+			<lieu_edition>Montbeliard</lieu_edition>
+			<lieu_impression>Belfort</lieu_impression>
+			<isbn>2-033-444-025</isbn>
+		</edition>
+		<avis>BOF!</avis>
+	</livre>
+	<article>
+		<titre>DOM SAX XML</titre>
+		<auteur>G.Delrhue</auteur>
+		<auteur>P.Anderson</auteur>
+		<journal nom_journal="01 Informatique" annee="2002">
+			<page>4	</page>
+			<num_journal>1</num_journal>
+		</journal>
+	</article>
+	<article>
+		<titre>Java</titre>
+		<auteur>Sun Microsystem</auteur>
+		<journal annee="2002">
+			<page>4</page>
+			<num_journal>2</num_journal>
+		</journal>
+	</article>
+</bibliographie>

@@ -1,0 +1,8 @@
+
+public class ChaineNulle extends Exception{
+
+	String nom;
+	String prenom;
+	String age;
+	
+}

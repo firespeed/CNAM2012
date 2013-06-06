@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Asterix.jpg&apos; to &apos;00 Java SRC S4 2013&apos;&#x0D;&#x0A;- Original project: &apos;99.8 Les gaulois 02&apos;&#x0D;&#x0A;- Destination element: &apos;00 Java SRC S4 2013&apos;&#x0D;&#x0A;- Original element: &apos;Asterix.jpg&apos;" description="Copy file" destination="=00 Java SRC S4 2013" element1="WebContent/images/Asterix.jpg" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1363614240650" units="0" version="1.0"/>
+</session>

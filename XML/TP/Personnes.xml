@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<personnes>
+	<personne naissance="1912" mort="1954" id="p342">
+	  <nom>
+		<prénom>Alan</prénom>
+		<nom_famille>Turing</nom_famille>
+	  </nom>
+	  <profession>informaticien</profession>
+	  <profession>mathématicien</profession>
+	  <profession>cryptographe</profession>
+	</personne>
+	
+	<personne naissance="1918" mort="1988" id="p4567">
+	  <nom>
+		<prénom>Richard</prénom>
+		<initiale_milieu>R</initiale_milieu>
+		<nom_famille>Feynman</nom_famille>
+	  </nom>
+	  <profession>physicien</profession>
+	  <loisir>Jouer des bongos</loisir>
+	</personne>
+</personnes>

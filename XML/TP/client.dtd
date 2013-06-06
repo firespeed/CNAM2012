@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT client (nom_complet, adresse, contact)>
+	<!ELEMENT nom_complet (nom,prenom)>
+	<!ELEMENT adresse  (num_rue, rue, ville)>
+	<!ELEMENT contact  (telephone*, fax*, email*)>	
+	<!ELEMENT nom (#PCDATA)>
+	<!ELEMENT prenom (#PCDATA)>
+	<!ELEMENT num_rue (#PCDATA)>
+	<!ELEMENT rue (#PCDATA)>
+	<!ELEMENT ville (#PCDATA)>
+	<!ELEMENT telephone (#PCDATA)>
+	<!ELEMENT fax (#PCDATA)>
+	<!ELEMENT email (#PCDATA)>

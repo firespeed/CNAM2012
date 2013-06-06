@@ -1,0 +1,19 @@
+
+public class LesChaines {
+
+
+	
+	public static void main (String args[]){
+
+	String ch = "bonjour";
+	int n = ch.length();
+
+	System.out.println("Longueur de "+ch+" = "+n);
+	
+	
+	ch = "hello" ; n = ch.length(); 	// n contient 5
+	ch = ""; n = ch.length() ; 
+    
+	}
+
+}

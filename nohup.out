@@ -1,0 +1,4 @@
+(Build 3.3.2.201302081546) [ERROR]  Expected JSFunction node when applying documentation; however, the node type was 'com.aptana.editor.js.parsing.ast.JSConstructNode' instead. Source =
+new function () {this.b = 1;this.f = function () {this.c = 2;};}
+(Build 3.3.2.201302081546) [ERROR]  Expected JSFunction node when applying documentation; however, the node type was 'com.aptana.editor.js.parsing.ast.JSConstructNode' instead. Source =
+new function Zoola2 () {this.p = 1;}

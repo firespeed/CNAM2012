@@ -1,0 +1,15 @@
+
+public class Q5 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Poule b1 = new Poule("2004"); 
+		Poule b2 = new Poule(2004); 
+		Poule b3 = new Poule();
+		
+		System.out.println(b1.x + " et " + b2.x + " et encore " + b3.x );
+	}
+
+}

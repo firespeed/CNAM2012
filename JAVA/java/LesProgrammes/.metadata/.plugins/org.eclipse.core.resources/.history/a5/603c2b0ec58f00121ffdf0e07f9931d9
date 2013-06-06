@@ -1,0 +1,24 @@
+public class NbPrem {
+
+		public static void main (String[] args)
+		{
+			int jusqua = 200;
+			int a = jusqua;
+			boolean b = true;
+			
+			while(a>=0)
+			{
+				for(int j=2;j<a;j++)
+				{
+//					k = a%j;
+					if(a%j==0) b = false;
+				}
+				if(b) System.out.println(a);
+			b = true;
+			a--;
+			}
+			
+		}
+			
+	}
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<personnes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="agents.xsd">
+	<personne>
+		<nom>Dupond</nom>
+		<service>Achats</service>
+	</personne>
+	<personne>
+		<nom>Durand</nom>
+		<service>Achats</service>
+	</personne>
+	<personne>
+		<nom>Dupuis</nom>
+		<service>Courrier</service>
+	</personne>
+</personnes>
+

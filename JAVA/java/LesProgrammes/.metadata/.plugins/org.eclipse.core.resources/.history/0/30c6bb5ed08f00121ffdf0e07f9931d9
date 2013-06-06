@@ -1,0 +1,61 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+
+public class FrameExamen extends JFrame{
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JPanel north = new JPanel();
+    JPanel south = new JPanel();
+    JPanel east = new JPanel();
+    JPanel west = new JPanel();
+    JPanel center = new JPanel();
+
+    FrameExamen() {
+        super("Examen Mise en page Swing");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        setSize(800, 600);
+        JPanel panneauPrincipal = new JPanel();
+
+        panneauPrincipal.setLayout(new BorderLayout());
+
+        // Panneau north
+        JLabel titre = new JLabel("Titre");       
+        titre.setFont(new Font("sansserif", Font.BOLD, 32));
+        north.setBackground(new Color(255, 0, 255));
+        north.add(titre);
+        
+        
+        panneauPrincipal.add("North", north);
+        panneauPrincipal.add("South", south);
+        panneauPrincipal.add("East", east);
+        panneauPrincipal.add("West", west);
+        panneauPrincipal.add("Center", center);
+
+        setContentPane(panneauPrincipal);
+    }
+	
+	
+    public static void main(String[] arguments) {
+        JFrame frame = new FrameExamen();
+        frame.setVisible(true);
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

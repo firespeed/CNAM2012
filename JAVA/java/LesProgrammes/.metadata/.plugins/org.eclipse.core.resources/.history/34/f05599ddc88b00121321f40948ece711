@@ -1,0 +1,25 @@
+
+public class LesChaines {
+
+
+	
+	public static void main (String args[]){
+
+		String ch = "bonjour";
+		int n = ch.length();
+		System.out.println("Longueur de "+ch+" = "+n);
+		
+		
+		for(int i=0;i<n;i++)
+		{
+			System.out.println("caractère en position "+i+" = "+ch.charAt(i));		
+		}
+
+		String mot = "Langage Java";
+		for (char c : mot) System.out.println(c);		
+
+		
+		
+	}
+
+}

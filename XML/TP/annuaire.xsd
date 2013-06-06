@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="type_page">
+		<xsd:sequence>
+			<xsd:element name="titre" type="xsd:string"/>
+			<xsd:element name="lien" type="xsd:string"/>
+			<xsd:element name="cle_site" type="xsd:positiveInteger"/>
+		</xsd:sequence>
+		<xsd:attribute name="numero" type="xsd:positiveInteger" use="required"/>
+		<xsd:attribute name="langue" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="type_site">
+		<xsd:sequence>
+			<xsd:element name="nom" type="xsd:string"/>
+			<xsd:element name="url" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="numero" type="xsd:positiveInteger" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="type_annuaire">
+		<xsd:sequence>
+			<xsd:element name="page" type="type_page" maxOccurs="unbounded">
+				<xsd:unique name="cle_page">
+					<xsd:selector xpath=".//page"/>
+					<xsd:field xpath="./@numero"/>
+				</xsd:unique>
+			</xsd:element>
+			<xsd:element name="site" type="type_site" maxOccurs="unbounded">
+				<xsd:key name="num_site">
+					<xsd:selector xpath=".//site"/>
+					<xsd:field xpath="./@numero"/>
+				</xsd:key>
+				<xsd:keyref name="cle_site" refer="num_site">
+					<xsd:selector xpath=".//page"/>
+					<xsd:field xpath="./cle_site"/>
+				</xsd:keyref>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="annuaire" type="type_annuaire"/>
+</xsd:schema>

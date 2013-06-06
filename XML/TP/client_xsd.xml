@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<client xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="client.xsd">
+	<nom_complet>
+		<nom>Fino</nom>
+		<prenom>Jean-Marie</prenom>
+	</nom_complet>
+	<adresse>
+		<num_rue>24</num_rue>
+		<rue>Grand chemin</rue>
+		<ville>Montbéliard</ville>
+	</adresse>
+	<contact>
+		<telephone>03-81-90-99-00</telephone>
+		<fax>03-81-90-99-01</fax>
+		<email>jmfino@divae.fr</email>
+	</contact>
+</client>

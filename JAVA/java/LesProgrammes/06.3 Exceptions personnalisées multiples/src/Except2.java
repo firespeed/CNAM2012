@@ -1,0 +1,25 @@
+
+public class Except2 {
+
+	public static void main(String args[]) {
+		try {
+			Point a = new Point (1, 4) ;
+			a.affiche() ;
+			
+			a.deplace (-3, 5) ;	
+			// Ne s'éxécutera pas sortie en exception
+			// par deplace
+			a = new Point (-3, 5) ;
+			a.affiche() ;
+		
+		} catch (ErrConst e) {
+			System.out.println("Erreur construction ");
+			System.exit(-1);
+		}
+		catch (ErrDepl e)
+		{ 
+			System.out.println ("Erreur deplacement ") ;
+			System.exit (-1) ;
+		}
+	}
+}

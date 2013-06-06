@@ -1,0 +1,107 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+
+public class FrameExamen extends JFrame{
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	JPanel panneauPrincipal = new JPanel();
+
+	JPanel north = new JPanel();
+    JPanel south = new JPanel();
+    JPanel east = new JPanel(new GridLayout(6,1,20,20));
+    JPanel west = new JPanel(new GridLayout(6,1,20,20));
+    JPanel center = new JPanel(new GridLayout(2,2,20,20));
+    
+    JPanel centerHaut = new JPanel(new GridLayout(1,2,20,20));
+
+    JPanel centerHautDroite = new JPanel(new GridLayout(3,1,20,20));
+    
+    JPanel centerBas = new JPanel(new GridLayout(1,2,20,20));
+    
+    
+    FrameExamen() {
+        super("Examen Mise en page Swing");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        setSize(800, 600);
+        
+        panneauPrincipal.setLayout(new BorderLayout());
+
+        // Panneau north
+        JLabel titre = new JLabel("Titre");       
+        titre.setFont(new Font("sansserif", Font.BOLD, 32));
+        north.setBackground(new Color(255, 0, 255));
+        north.add(titre);
+        
+        // Panneau west
+        west.setBackground(new Color(255, 201, 201));
+        west.add(new JLabel("  Option1  "));
+        west.add(new JLabel("  Option2  "));
+        west.add(new JLabel("  Option3  "));
+        west.add(new JLabel("  Option4  "));
+        west.add(new JLabel("  Option5  "));
+        west.add(new JLabel("  Option6  "));
+        
+        // Panneau east
+        east.setBackground(new Color(255, 201, 201));
+        east.add(new JLabel("  param1  "));
+        east.add(new JLabel("  param2  "));
+        east.add(new JLabel("  param3  "));
+        east.add(new JLabel("  param4  "));
+        east.add(new JLabel("  param5  "));
+        east.add(new JLabel("  param6  "));
+        
+        // Panneau south
+        south.setBackground(new Color(255, 0, 255));
+        south.add(new JLabel("Informations affichées de la barre d'état"));
+        
+        // Panneau central
+        ImageIcon img = new ImageIcon("Asterix.jpg");
+        JButton Asterix = new JButton(img);
+        centerHaut.add(Asterix);        
+
+        centerHaut.add(centerHautDroite);
+        
+        center.add(centerHaut);
+        
+        
+        //
+        JTextArea area = new JTextArea("Une texteArea",40,10);
+        
+        center.add(centerBas);
+        
+        
+        panneauPrincipal.add("North", north);
+        panneauPrincipal.add("South", south);
+        panneauPrincipal.add("East", east);
+        panneauPrincipal.add("West", west);
+        panneauPrincipal.add("Center", center);
+
+        setContentPane(panneauPrincipal);
+    }
+	
+	
+    public static void main(String[] arguments) {
+        JFrame frame = new FrameExamen();
+        frame.setVisible(true);
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

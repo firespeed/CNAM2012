@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;nbPrem.java&apos; to &apos;NbPrem.java&apos;&#x0D;&#x0A;- Original project: &apos;99.1 Nombres premiers&apos;&#x0D;&#x0A;- Original element: &apos;nbPrem.java&apos;&#x0D;&#x0A;- Renamed element: &apos;NbPrem.java&apos;" description="Rename compilation unit &apos;nbPrem.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{nbPrem.java" name="NbPrem.java" references="false" stamp="1363607923678" version="1.0"/>
+</session>
